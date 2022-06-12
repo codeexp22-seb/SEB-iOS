@@ -12,6 +12,7 @@ struct LearnView: View {
         NavigationView {
             ScrollView {
                 ProgressRingsView()
+                CoursesView()
             }
             .navigationTitle("Hi Rui Yang!")
         }

@@ -14,12 +14,16 @@ struct CourseCardView: View {
     var course: Course
     
     var body: some View {
-        ZStack {
-            AsyncImage(url: course.courseBannerURL) { phase in
-                phase.image?
+        ZStack(alignment: .bottom) {
+            AsyncImage(url: course.courseBannerURL) { image in
+                image
                     .resizable()
-                    .scaledToFit()
+                    .scaledToFill()
+            } placeholder: {
+                Color.purple.opacity(0.1)
             }
+            .frame(maxWidth: 300, maxHeight: 200)
+            .cornerRadius(8)
             
             VStack(alignment: .leading) {
                 Text(course.title)
@@ -27,11 +31,35 @@ struct CourseCardView: View {
                     .bold()
                     .multilineTextAlignment(.leading)
                 
+                HStack(spacing: 4) {
+                    if let chaptersCompleted = chaptersCompleted {
+                        Text("\(chaptersCompleted)/\(course.lesson.count) chapters •")
+                            .font(.subheadline)
+                    } else {
+                        Text("\(course.lesson.count) chapters •")
+                            .font(.subheadline)
+                    }
+                    
+                    ForEach(course.categories, id: \.rawValue) { category in
+                        Image(systemName: category.imageName)
+                            .foregroundColor(.accentColor)
+                    }
+                }
+                
                 Text(course.description)
                     .font(.subheadline)
                     .multilineTextAlignment(.leading)
+                
+                CourseProgressView(progress: 0.5)
             }
+            .padding()
+            .background(Color(.systemBackground))
+            .cornerRadius(8)
         }
+        .frame(width: 300, height: 200)
+        .cornerRadius(8)
+        .background(Color(uiColor: .systemBackground).cornerRadius(8)
+            .shadow(color: .black.opacity(0.1), radius: 6))
     }
 }
 
