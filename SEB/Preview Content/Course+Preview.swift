@@ -11,16 +11,16 @@ extension Course {
     static var sample = Course(title: "Intro to Swift",
                                description: "Potato",
                                categories: [.skill, .nationalService],
-                               courseBannerURL: URL(string: "https://tinkercademy.com/wp-content/uploads/2019/05/IMG_8168.jpg")!,
+                               courseBannerURL: URL(string: "https://devimages-cdn.apple.com/wwdc-services/articles/images/79D2FB92-5621-412F-A544-C35938FF1041/2048.jpeg")!,
                                lesson: [
                                 CourseLesson(title: "aaa",
-                                             description: "",
+                                             description: "a",
                                              lessonUnit: []),
                                 CourseLesson(title: "aaa",
-                                             description: "",
+                                             description: "description",
                                              lessonUnit: []),
                                 CourseLesson(title: "aaa",
-                                             description: "",
+                                             description: "potato",
                                              lessonUnit: [])
                                ])
 }

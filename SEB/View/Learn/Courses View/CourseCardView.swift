@@ -13,6 +13,8 @@ struct CourseCardView: View {
     
     var course: Course
     
+    @State var isCoursePresented = false
+    
     var body: some View {
         ZStack(alignment: .bottom) {
             Rectangle()
@@ -64,9 +66,15 @@ struct CourseCardView: View {
             .background(Color(.systemBackground))
             .cornerRadius(8)
         }
+        .onTapGesture {
+            isCoursePresented = true
+        }
         .cornerRadius(8)
         .background(Color(uiColor: .systemBackground).cornerRadius(8)
             .shadow(color: .black.opacity(0.1), radius: 6))
+        .fullScreenCover(isPresented: $isCoursePresented) {
+            CourseView(course: course)
+        }
     }
 }
 
