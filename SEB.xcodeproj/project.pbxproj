@@ -72,6 +72,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3283034728564FEE00414E6E /* Explore View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Explore View";
+			sourceTree = "<group>";
+		};
 		328F793F2856142B00E65FEB = {
 			isa = PBXGroup;
 			children = (
@@ -143,7 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				328F795E28561B5100E65FEB /* LearnView.swift */,
-				32D74D162856394700674AFE /* CoursesView */,
+				3283034728564FEE00414E6E /* Explore View */,
+				32D74D162856394700674AFE /* Courses View */,
 				32D74D152856391A00674AFE /* Progress Rings */,
 				32D74D11285637B400674AFE /* RichTextView.swift */,
 			);
@@ -197,14 +205,14 @@
 			path = "Progress Rings";
 			sourceTree = "<group>";
 		};
-		32D74D162856394700674AFE /* CoursesView */ = {
+		32D74D162856394700674AFE /* Courses View */ = {
 			isa = PBXGroup;
 			children = (
 				32D74D132856390600674AFE /* CoursesView.swift */,
 				32D74D172856395100674AFE /* CourseCardView.swift */,
 				32830345285649E200414E6E /* CourseProgressView.swift */,
 			);
-			path = CoursesView;
+			path = "Courses View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
