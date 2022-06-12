@@ -67,14 +67,21 @@ struct CourseView: View {
             ScrollView {
                 VStack(spacing: 0) {
                     ForEach(course.lesson) { lesson in
-                        VStack {
+                        VStack(alignment: .leading) {
                             Text(lesson.title)
+                                .font(.system(size: 24, weight: .bold))
                             Text(lesson.description)
+                                .font(.system(size: 15, weight: .regular))
                         }
+                        .frame(maxWidth: .infinity, alignment: .leading)
                         .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color(.systemGray5))
+                        .background(Color(.systemGray6))
                         .cornerRadius(8)
+                        .padding(.horizontal)
+                        
+                        Rectangle()
+                            .fill(Color(.systemGray6).opacity(0.5))
+                            .frame(width: 8, height: 16)
                     }
                 }
             }
