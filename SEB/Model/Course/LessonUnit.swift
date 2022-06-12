@@ -11,4 +11,5 @@ struct LessonUnit: Codable {
     var title: String
     
     var unitContents: [UnitRichText]
+    var quiz: []
 }
