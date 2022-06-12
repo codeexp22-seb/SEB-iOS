@@ -14,10 +14,12 @@ struct ProgressRingView: View {
     
     var progress: Double
     
+    @State var animationProgress = 0.0
+    
     var body: some View {
         VStack {
             ZStack {
-                CircularProgressView(progress: progress)
+                CircularProgressView(progress: animationProgress)
                     .frame(width: 100, height: 100)
                 
                 Image(systemName: systemName)
@@ -27,6 +29,16 @@ struct ProgressRingView: View {
             
             Text(title)
                 .font(.caption)
+        }
+        .onAppear {
+            withAnimation(.easeInOut(duration: 1)) {
+                animationProgress = progress
+            }
+        }
+        .onChange(of: progress) { progress in
+            withAnimation(.easeInOut(duration: 1)) {
+                animationProgress = progress
+            }
         }
     }
 }
