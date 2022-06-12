@@ -19,7 +19,7 @@ struct ProgressRingsView: View {
                 HStack(spacing: 16) {
                     ProgressRingView(title: "Skill",
                                      systemName: "text.book.closed",
-                                     progress: 1)
+                                     progress: 0.9)
                     
                     ProgressRingView(title: "Fitness",
                                      systemName: "figure.walk",
@@ -27,11 +27,11 @@ struct ProgressRingsView: View {
                     
                     ProgressRingView(title: "NS",
                                      systemName: "shield",
-                                     progress: 1)
+                                     progress: 0.8)
                     
                     ProgressRingView(title: "Badge",
                                      systemName: "hexagon",
-                                     progress: 1)
+                                     progress: 0.3)
                 }
                 .padding(.horizontal, 21)
             }

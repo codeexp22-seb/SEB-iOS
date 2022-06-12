@@ -15,15 +15,20 @@ struct CourseCardView: View {
     
     var body: some View {
         ZStack(alignment: .bottom) {
-            AsyncImage(url: course.courseBannerURL) { image in
-                image
-                    .resizable()
-                    .scaledToFill()
-            } placeholder: {
-                Color.purple.opacity(0.1)
-            }
-            .frame(maxWidth: 300, maxHeight: 200)
-            .cornerRadius(8)
+            Rectangle()
+                .stroke(.clear)
+                .background(
+                    VStack {
+                        AsyncImage(url: course.courseBannerURL) { image in
+                            image
+                                .resizable()
+                                .scaledToFit()
+                        } placeholder: {
+                            Color.accentColor.opacity(0.1)
+                        }
+                        Spacer()
+                    }
+                )
             
             VStack(alignment: .leading) {
                 Text(course.title)
@@ -46,17 +51,19 @@ struct CourseCardView: View {
                     }
                 }
                 
-                Text(course.description)
-                    .font(.subheadline)
-                    .multilineTextAlignment(.leading)
-                
-                CourseProgressView(progress: 0.5)
+                if let chaptersCompleted = chaptersCompleted {
+                    CourseProgressView(progress: Double(chaptersCompleted) / Double(course.lesson.count))
+                } else {
+                    Text(course.description)
+                        .font(.subheadline)
+                        .multilineTextAlignment(.leading)
+                }
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
             .padding()
             .background(Color(.systemBackground))
             .cornerRadius(8)
         }
-        .frame(width: 300, height: 200)
         .cornerRadius(8)
         .background(Color(uiColor: .systemBackground).cornerRadius(8)
             .shadow(color: .black.opacity(0.1), radius: 6))

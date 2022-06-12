@@ -15,9 +15,10 @@ struct CoursesView: View {
                 .padding(.leading, 21)
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
-                    CourseCardView(course: .sample)
-                    CourseCardView(course: .sample)
-                    CourseCardView(course: .sample)
+                    ForEach(0..<10) { _ in
+                        CourseCardView(chaptersCompleted: 2, course: .sample)
+                            .frame(width: 300, height: 230)
+                    }
                 }
                 .padding(.horizontal, 21)
                 .padding(.vertical, 8)
