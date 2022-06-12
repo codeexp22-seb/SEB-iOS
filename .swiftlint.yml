@@ -9,3 +9,6 @@ identifier_name:
     - x
     - y
     - id
+
+excluded:
+  - SEB/Preview\ Content/

@@ -31,7 +31,7 @@ struct RichTextView: View {
         case .image:
             if let url = URL(string: unitRichText.text) {
                 AsyncImage(url: url) { phase in
-                    return phase.image?.resizable()
+                    return phase.image?.resizable().scaledToFit()
                 }
             } else {
                 Text(attributedString)

@@ -16,4 +16,6 @@ struct Course: Codable, Identifiable {
     var categories: [CourseCategory]
     
     var courseBannerURL: URL
+    
+    var lesson: [CourseLesson]
 }

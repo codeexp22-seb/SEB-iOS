@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3283034428563CC900414E6E /* Course+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3283034328563CC900414E6E /* Course+Preview.swift */; };
 		328F794C2856142B00E65FEB /* SEBApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328F794B2856142B00E65FEB /* SEBApp.swift */; };
 		328F794E2856142B00E65FEB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328F794D2856142B00E65FEB /* ContentView.swift */; };
 		328F79502856142D00E65FEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 328F794F2856142D00E65FEB /* Assets.xcassets */; };
@@ -27,9 +28,12 @@
 		32D74D0E28562CFA00674AFE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D74D0D28562CFA00674AFE /* User.swift */; };
 		32D74D1028562DE700674AFE /* QuizQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D74D0F28562DE700674AFE /* QuizQuestion.swift */; };
 		32D74D12285637B400674AFE /* RichTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D74D11285637B400674AFE /* RichTextView.swift */; };
+		32D74D142856390600674AFE /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D74D132856390600674AFE /* CoursesView.swift */; };
+		32D74D182856395100674AFE /* CourseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D74D172856395100674AFE /* CourseCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3283034328563CC900414E6E /* Course+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Course+Preview.swift"; sourceTree = "<group>"; };
 		328F79482856142B00E65FEB /* SEB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SEB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		328F794B2856142B00E65FEB /* SEBApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SEBApp.swift; sourceTree = "<group>"; };
 		328F794D2856142B00E65FEB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +55,8 @@
 		32D74D0D28562CFA00674AFE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		32D74D0F28562DE700674AFE /* QuizQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestion.swift; sourceTree = "<group>"; };
 		32D74D11285637B400674AFE /* RichTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichTextView.swift; sourceTree = "<group>"; };
+		32D74D132856390600674AFE /* CoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesView.swift; sourceTree = "<group>"; };
+		32D74D172856395100674AFE /* CourseCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				328F79522856142D00E65FEB /* Preview Assets.xcassets */,
+				3283034328563CC900414E6E /* Course+Preview.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -134,8 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				328F795E28561B5100E65FEB /* LearnView.swift */,
-				328F796728561C9F00E65FEB /* ProgressRingsView.swift */,
-				328F796928561CC500E65FEB /* ProgressRingView.swift */,
+				32D74D162856394700674AFE /* CoursesView */,
+				32D74D152856391A00674AFE /* Progress Rings */,
 				32D74D11285637B400674AFE /* RichTextView.swift */,
 			);
 			path = Learn;
@@ -177,6 +184,24 @@
 				32D74D0D28562CFA00674AFE /* User.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		32D74D152856391A00674AFE /* Progress Rings */ = {
+			isa = PBXGroup;
+			children = (
+				328F796728561C9F00E65FEB /* ProgressRingsView.swift */,
+				328F796928561CC500E65FEB /* ProgressRingView.swift */,
+			);
+			path = "Progress Rings";
+			sourceTree = "<group>";
+		};
+		32D74D162856394700674AFE /* CoursesView */ = {
+			isa = PBXGroup;
+			children = (
+				32D74D132856390600674AFE /* CoursesView.swift */,
+				32D74D172856395100674AFE /* CourseCardView.swift */,
+			);
+			path = CoursesView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,12 +297,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				32D74D1028562DE700674AFE /* QuizQuestion.swift in Sources */,
+				32D74D182856395100674AFE /* CourseCardView.swift in Sources */,
 				32D74D03285627C400674AFE /* UnitRichText.swift in Sources */,
 				32D74CFB2856264000674AFE /* Course.swift in Sources */,
 				328F794E2856142B00E65FEB /* ContentView.swift in Sources */,
 				328F796A28561CC500E65FEB /* ProgressRingView.swift in Sources */,
 				328F795D28561B0D00E65FEB /* CircularProgressView.swift in Sources */,
 				328F794C2856142B00E65FEB /* SEBApp.swift in Sources */,
+				3283034428563CC900414E6E /* Course+Preview.swift in Sources */,
 				32D74D12285637B400674AFE /* RichTextView.swift in Sources */,
 				32D74D05285627D600674AFE /* UnitRichText+TextType.swift in Sources */,
 				32D74D0E28562CFA00674AFE /* User.swift in Sources */,
@@ -286,6 +313,7 @@
 				32D74D0A28562CAB00674AFE /* UserViewModel.swift in Sources */,
 				32D74CFD2856267100674AFE /* CourseCategory.swift in Sources */,
 				328F796328561B6100E65FEB /* ProfileView.swift in Sources */,
+				32D74D142856390600674AFE /* CoursesView.swift in Sources */,
 				328F796828561C9F00E65FEB /* ProgressRingsView.swift in Sources */,
 				328F795F28561B5100E65FEB /* LearnView.swift in Sources */,
 				32D74D012856277E00674AFE /* LessonUnit.swift in Sources */,
