@@ -8,7 +8,7 @@
 import Foundation
 
 enum CourseCategory: String, Codable {
-    case skill = "skill"
-    case fitness = "fitness"
-    case ns = "ns"
+    case skill
+    case fitness
+    case nationalService
 }

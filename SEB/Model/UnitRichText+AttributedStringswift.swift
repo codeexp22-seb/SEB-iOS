@@ -15,10 +15,14 @@ extension UnitRichText {
         
         switch type {
         case .code:
-            return attributedString.settingAttributes(.init([.font: UIFont.monospacedSystemFont(ofSize: UIFont.systemFontSize,
-                                                                                                weight: .regular)]))
+            return attributedString.settingAttributes(.init([
+                .font: UIFont.monospacedSystemFont(ofSize: UIFont.systemFontSize,
+                                                   weight: .regular)
+            ]))
         case .header:
-            return attributedString.settingAttributes(.init([.font: UIFont.boldSystemFont(ofSize: UIFont.systemFontSize + 1)]))
+            return attributedString.settingAttributes(.init([
+                .font: UIFont.boldSystemFont(ofSize: UIFont.systemFontSize + 1)
+            ]))
         case .markdown:
             return (try? AttributedString(markdown: text)) ?? attributedString
         case .plainText:
