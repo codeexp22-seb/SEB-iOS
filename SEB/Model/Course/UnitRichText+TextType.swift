@@ -13,5 +13,6 @@ extension UnitRichText {
         case markdown
         case plainText
         case code
+        case image
     }
 }
