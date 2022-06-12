@@ -52,7 +52,9 @@
 			isa = PBXGroup;
 			children = (
 				328F794B2856142B00E65FEB /* SEBApp.swift */,
-				328F794D2856142B00E65FEB /* ContentView.swift */,
+				328F795B28561AA300E65FEB /* View Model */,
+				328F795A28561A9E00E65FEB /* View */,
+				328F795928561A9700E65FEB /* Model */,
 				328F794F2856142D00E65FEB /* Assets.xcassets */,
 				328F79512856142D00E65FEB /* Preview Content */,
 			);
@@ -65,6 +67,28 @@
 				328F79522856142D00E65FEB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		328F795928561A9700E65FEB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		328F795A28561A9E00E65FEB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				328F794D2856142B00E65FEB /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		328F795B28561AA300E65FEB /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
