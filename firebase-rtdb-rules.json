@@ -1,0 +1,13 @@
+{
+  "rules": {
+    "badges": {
+      "${subpath}": {
+        ".read": "true",
+    	  ".write": "auth.uid != null",
+      }
+    },
+    
+    ".read": "auth.uid != null",
+    ".write": "auth.uid != null",
+  }
+}
