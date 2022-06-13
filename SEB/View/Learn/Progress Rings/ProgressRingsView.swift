@@ -9,6 +9,9 @@ import Foundation
 import SwiftUI
 
 struct ProgressRingsView: View {
+    
+    @ObservedObject var userViewModel: UserViewModel
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text("Your Progress")
@@ -37,6 +40,6 @@ struct ProgressRingsView: View {
 
 struct ProgressRingsView_Previews: PreviewProvider {
     static var previews: some View {
-        ProgressRingsView()
+        ProgressRingsView(userViewModel: .init())
     }
 }

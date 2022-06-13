@@ -9,6 +9,8 @@ import Foundation
 
 extension Course {
     #warning("@Rui Yang please add your courses here ❤️")
+    #warning("Remove sample in actual demo")
     static let dummy: [Course] = [
+        .sample
     ]
 }

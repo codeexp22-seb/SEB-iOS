@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct LearnView: View {
+    
+    @ObservedObject var userViewModel: UserViewModel
+    
     var body: some View {
         NavigationView {
             ScrollView {
-                ProgressRingsView()
+                ProgressRingsView(userViewModel: userViewModel)
                 CoursesView()
                 ExploreView()
             }
@@ -22,6 +25,6 @@ struct LearnView: View {
 
 struct LearnView_Previews: PreviewProvider {
     static var previews: some View {
-        LearnView()
+        LearnView(userViewModel: .init())
     }
 }

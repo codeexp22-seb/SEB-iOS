@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum CourseCategory: String, Codable {
+enum CourseCategory: String, Codable, Hashable {
     case skill
     case fitness
     case nationalService

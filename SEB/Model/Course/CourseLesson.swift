@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CourseLesson: Codable, Identifiable, Equatable {
+struct CourseLesson: Codable, Identifiable, Equatable, Hashable {
     var id = UUID()
     var title: String
     var description: String

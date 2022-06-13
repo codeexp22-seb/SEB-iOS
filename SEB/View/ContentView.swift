@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var userViewModel = UserViewModel()
+    
     var body: some View {
         TabView {
-            LearnView()
+            LearnView(userViewModel: userViewModel)
                 .tabItem {
                     Label("Learn", systemImage: "graduationcap")
                 }

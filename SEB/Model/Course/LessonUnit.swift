@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct LessonUnit: Codable, Equatable {
+struct LessonUnit: Codable, Equatable, Hashable {
     var title: String
     
     var unitContents: [UnitRichText]

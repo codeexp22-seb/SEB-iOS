@@ -8,5 +8,11 @@
 import Foundation
 
 class UserViewModel: ObservableObject {
+    var userCourses: [Course] = [.sample]
     
+    var suggestedCourses: [Course] {
+        return Array(Set(allCourses).subtracting(userCourses))
+    }
+    
+    var allCourses: [Course] = Course.dummy
 }
