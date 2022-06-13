@@ -16,58 +16,56 @@ struct CourseCardView: View {
     @State var isCoursePresented = false
     
     var body: some View {
-        ZStack(alignment: .bottom) {
-            Rectangle()
-                .stroke(.clear)
-                .background(
-                    VStack {
+        Button {
+            isCoursePresented = true
+        } label: {
+            VStack {
+                Rectangle()
+                    .stroke(.clear)
+                    .background(
                         AsyncImage(url: course.courseBannerURL) { image in
                             image
                                 .resizable()
-                                .scaledToFit()
+                                .scaledToFill()
                         } placeholder: {
                             Color.accentColor.opacity(0.1)
                         }
-                        Spacer()
-                    }
-                )
-            
-            VStack(alignment: .leading) {
-                Text(course.title)
-                    .font(.title2)
-                    .bold()
-                    .multilineTextAlignment(.leading)
+                    )
                 
-                HStack(spacing: 4) {
-                    if let chaptersCompleted = chaptersCompleted {
-                        Text("\(chaptersCompleted)/\(course.lesson.count) chapters •")
-                            .font(.subheadline)
-                    } else {
-                        Text("\(course.lesson.count) chapters •")
-                            .font(.subheadline)
+                VStack(alignment: .leading) {
+                    Text(course.title)
+                        .font(.title2)
+                        .bold()
+                        .multilineTextAlignment(.leading)
+                    
+                    HStack(spacing: 4) {
+                        if let chaptersCompleted = chaptersCompleted {
+                            Text("\(chaptersCompleted)/\(course.lesson.count) chapters •")
+                                .font(.subheadline)
+                        } else {
+                            Text("\(course.lesson.count) chapters •")
+                                .font(.subheadline)
+                        }
+                        
+                        ForEach(course.categories, id: \.rawValue) { category in
+                            Image(systemName: category.imageName)
+                                .foregroundColor(.accentColor)
+                        }
                     }
                     
-                    ForEach(course.categories, id: \.rawValue) { category in
-                        Image(systemName: category.imageName)
-                            .foregroundColor(.accentColor)
+                    if let chaptersCompleted = chaptersCompleted {
+                        CourseProgressView(progress: Double(chaptersCompleted) / Double(course.lesson.count))
+                    } else {
+                        Text(course.description)
+                            .font(.subheadline)
+                            .multilineTextAlignment(.leading)
                     }
                 }
-                
-                if let chaptersCompleted = chaptersCompleted {
-                    CourseProgressView(progress: Double(chaptersCompleted) / Double(course.lesson.count))
-                } else {
-                    Text(course.description)
-                        .font(.subheadline)
-                        .multilineTextAlignment(.leading)
-                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding()
+                .background(Color(.systemBackground))
+                .cornerRadius(8)
             }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding()
-            .background(Color(.systemBackground))
-            .cornerRadius(8)
-        }
-        .onTapGesture {
-            isCoursePresented = true
         }
         .cornerRadius(8)
         .background(Color(uiColor: .systemBackground).cornerRadius(8)
