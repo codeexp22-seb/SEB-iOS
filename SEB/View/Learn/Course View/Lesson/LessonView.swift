@@ -29,8 +29,13 @@ struct LessonView: View {
                 .font(.system(size: 24, weight: .bold))
                 .padding(.horizontal, 21)
             
-            UnitView(lesson: courseLesson.lessonUnit[currentUnit])
-                .padding(.horizontal, 21)
+            if currentUnit == courseLesson.lessonUnit.count {
+                QuizView(questions: courseLesson.quiz)
+                    .padding(.horizontal, 21)
+            } else {
+                UnitView(lesson: courseLesson.lessonUnit[currentUnit])
+                    .padding(.horizontal, 21)
+            }
             
             HStack {
                 Button {
@@ -42,7 +47,7 @@ struct LessonView: View {
                 
                 Spacer()
                 
-                Text("\(currentUnit + 1) of \(courseLesson.lessonUnit.count)")
+                Text("\(currentUnit + 1) of \(courseLesson.lessonUnit.count + 1)")
                 
                 Spacer()
                 
@@ -51,7 +56,7 @@ struct LessonView: View {
                 } label: {
                     Image(systemName: "arrow.forward")
                 }
-                .disabled(currentUnit == courseLesson.lessonUnit.count - 1)
+                .disabled(currentUnit == courseLesson.lessonUnit.count)
             }
             .font(.system(size: 20, weight: .bold))
             .padding(21)
@@ -63,6 +68,6 @@ struct LessonView: View {
 
 struct LessonView_Previews: PreviewProvider {
     static var previews: some View {
-        LessonView(courseLesson: .init(title: "", description: "", lessonUnit: [.sample]))
+        LessonView(courseLesson: .init(title: "", description: "", lessonUnit: [.sample], quiz: [.sample]))
     }
 }

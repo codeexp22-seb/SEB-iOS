@@ -14,7 +14,7 @@ struct QuizQuestionView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Question \(questionIndex):")
+            Text("Question \(questionIndex + 1):")
             
             Text(quizQuestion.title)
                 .multilineTextAlignment(.leading)

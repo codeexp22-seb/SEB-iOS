@@ -21,6 +21,7 @@ struct QuizOptionRichText: View {
                     .font: UIFont.monospacedSystemFont(ofSize: UIFont.systemFontSize,
                                                        weight: .regular)
                 ])))
+                .multilineTextAlignment(.leading)
             case .header:
                 Text(attributedString.settingAttributes(.init([
                     .font: UIFont.boldSystemFont(ofSize: UIFont.systemFontSize + 1)
@@ -55,6 +56,7 @@ struct QuizOptionRichText: View {
                 }
             }
         }
+        .frame(maxWidth: .infinity, alignment: .leading)
         .padding()
         .background(Color(.systemGray6))
         .cornerRadius(8)

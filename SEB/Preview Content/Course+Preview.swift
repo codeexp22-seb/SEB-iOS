@@ -15,13 +15,16 @@ extension Course {
                                lesson: [
                                 CourseLesson(title: "aaa",
                                              description: "a",
-                                             lessonUnit: [.sample, .sample, .sample]),
+                                             lessonUnit: [.sample, .sample, .sample],
+                                             quiz: [.sample, .sample, .sample]),
                                 CourseLesson(title: "aaa",
                                              description: "description",
-                                             lessonUnit: [.sample, .sample, .sample]),
+                                             lessonUnit: [.sample, .sample, .sample],
+                                             quiz: [.sample, .sample, .sample]),
                                 CourseLesson(title: "aaa",
                                              description: "potato",
-                                             lessonUnit: [.sample, .sample, .sample])
+                                             lessonUnit: [.sample, .sample, .sample],
+                                             quiz: [.sample, .sample, .sample])
                                ],
                                badgeQuiz: [
                                 QuizQuestion(title: "Test Question", correctOptionIndex: 1, options: [
