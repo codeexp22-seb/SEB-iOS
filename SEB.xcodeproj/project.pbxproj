@@ -13,6 +13,7 @@
 		328A3BF82856644100FA0F6D /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3BF72856644100FA0F6D /* CourseView.swift */; };
 		328A3BFB2856667C00FA0F6D /* CourseBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3BFA2856667C00FA0F6D /* CourseBannerView.swift */; };
 		328A3BFE2856FBF600FA0F6D /* CGFloat+SafeAreaInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3BFD2856FBF600FA0F6D /* CGFloat+SafeAreaInsets.swift */; };
+		328A3C002856FD0F00FA0F6D /* URL+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3BFF2856FD0F00FA0F6D /* URL+Preview.swift */; };
 		328F794C2856142B00E65FEB /* SEBApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328F794B2856142B00E65FEB /* SEBApp.swift */; };
 		328F794E2856142B00E65FEB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328F794D2856142B00E65FEB /* ContentView.swift */; };
 		328F79502856142D00E65FEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 328F794F2856142D00E65FEB /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		328A3BF72856644100FA0F6D /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
 		328A3BFA2856667C00FA0F6D /* CourseBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseBannerView.swift; sourceTree = "<group>"; };
 		328A3BFD2856FBF600FA0F6D /* CGFloat+SafeAreaInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+SafeAreaInsets.swift"; sourceTree = "<group>"; };
+		328A3BFF2856FD0F00FA0F6D /* URL+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Preview.swift"; sourceTree = "<group>"; };
 		328F79482856142B00E65FEB /* SEB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SEB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		328F794B2856142B00E65FEB /* SEBApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SEBApp.swift; sourceTree = "<group>"; };
 		328F794D2856142B00E65FEB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			children = (
 				328F79522856142D00E65FEB /* Preview Assets.xcassets */,
 				3283034328563CC900414E6E /* Course+Preview.swift */,
+				328A3BFF2856FD0F00FA0F6D /* URL+Preview.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				328A3BFB2856667C00FA0F6D /* CourseBannerView.swift in Sources */,
 				32D74D03285627C400674AFE /* UnitRichText.swift in Sources */,
 				32D74CFB2856264000674AFE /* Course.swift in Sources */,
+				328A3C002856FD0F00FA0F6D /* URL+Preview.swift in Sources */,
 				328F794E2856142B00E65FEB /* ContentView.swift in Sources */,
 				328F796A28561CC500E65FEB /* ProgressRingView.swift in Sources */,
 				32830346285649E200414E6E /* CourseProgressView.swift in Sources */,

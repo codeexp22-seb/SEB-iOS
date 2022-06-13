@@ -11,7 +11,7 @@ extension Course {
     static var sample = Course(title: "Intro to Swift",
                                description: "Potato",
                                categories: [.skill, .nationalService],
-                               courseBannerURL: URL(string: "https://devimages-cdn.apple.com/wwdc-services/articles/images/79D2FB92-5621-412F-A544-C35938FF1041/2048.jpeg")!,
+                               courseBannerURL: .sampleImage,
                                lesson: [
                                 CourseLesson(title: "aaa",
                                              description: "a",
