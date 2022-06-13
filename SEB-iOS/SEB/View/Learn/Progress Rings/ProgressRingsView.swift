@@ -28,10 +28,6 @@ struct ProgressRingsView: View {
                     ProgressRingView(title: "NS",
                                      systemName: "shield",
                                      progress: 0.8)
-                    
-                    ProgressRingView(title: "Badge",
-                                     systemName: "hexagon",
-                                     progress: 0.3)
                 }
                 .padding(.horizontal, 21)
             }
