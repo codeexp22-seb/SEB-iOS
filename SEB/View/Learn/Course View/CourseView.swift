@@ -23,6 +23,7 @@ struct CourseView: View {
                                 .font(.system(size: 24, weight: .bold))
                             Text(lesson.description)
                                 .font(.system(size: 15, weight: .regular))
+                                .multilineTextAlignment(.leading)
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding()
@@ -34,6 +35,33 @@ struct CourseView: View {
                             .fill(Color(.systemGray6).opacity(0.5))
                             .frame(width: 8, height: 16)
                     }
+                    
+                    VStack(alignment: .leading) {
+                        HStack {
+                            AsyncImage(url: course.badgeQuizImage) { image in
+                                image
+                                    .resizable()
+                                    .scaledToFit()
+                            } placeholder: {
+                                Image(systemName: "hexagon")
+                                    .resizable()
+                                    .scaledToFit()
+                            }
+                            .frame(height: 32)
+
+                            
+                            Text("Quiz")
+                                .font(.system(size: 24, weight: .bold))
+                        }
+                        Text("Take a skills assessment after you’ve completed the course!")
+                            .font(.system(size: 15, weight: .regular))
+                            .multilineTextAlignment(.leading)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding()
+                    .background(Color(.systemGray6))
+                    .cornerRadius(8)
+                    .padding(.horizontal)
                 }
             }
         }

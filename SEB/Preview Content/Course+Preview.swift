@@ -27,5 +27,6 @@ extension Course {
                                 QuizQuestion(title: "Test Question", correctOptionIndex: 1, options: [
                                     UnitRichText(text: "Test", type: .code)
                                 ])
-                               ])
+                               ],
+                               badgeQuizImage: URL(string: "https://user-images.githubusercontent.com/36725840/173285564-e8f87735-616a-4b42-8cd3-f6fe6ac9a435.png")!)
 }
