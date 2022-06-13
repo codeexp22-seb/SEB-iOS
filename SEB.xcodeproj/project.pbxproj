@@ -46,6 +46,7 @@
 		32D74D142856390600674AFE /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D74D132856390600674AFE /* CoursesView.swift */; };
 		32D74D182856395100674AFE /* CourseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D74D172856395100674AFE /* CourseCardView.swift */; };
 		32DE62AD2857A61A00553FE1 /* Course+DummyCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62AC2857A61A00553FE1 /* Course+DummyCourse.swift */; };
+		32DE62B12857AFC700553FE1 /* Rings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62B02857AFC700553FE1 /* Rings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +90,7 @@
 		32D74D132856390600674AFE /* CoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesView.swift; sourceTree = "<group>"; };
 		32D74D172856395100674AFE /* CourseCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCardView.swift; sourceTree = "<group>"; };
 		32DE62AC2857A61A00553FE1 /* Course+DummyCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Course+DummyCourse.swift"; sourceTree = "<group>"; };
+		32DE62B02857AFC700553FE1 /* Rings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				32D74D0D28562CFA00674AFE /* User.swift */,
+				32DE62B02857AFC700553FE1 /* Rings.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				328A3C0728570C8600FA0F6D /* LessonUnit+Preview.swift in Sources */,
+				32DE62B12857AFC700553FE1 /* Rings.swift in Sources */,
 				32D74D1028562DE700674AFE /* QuizQuestion.swift in Sources */,
 				32D74D182856395100674AFE /* CourseCardView.swift in Sources */,
 				328A3BFB2856667C00FA0F6D /* CourseBannerView.swift in Sources */,

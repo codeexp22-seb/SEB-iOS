@@ -10,7 +10,7 @@ import SwiftUI
 
 struct ProgressRingsView: View {
     
-    @ObservedObject var userViewModel: UserViewModel
+    var rings: Rings
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -22,15 +22,15 @@ struct ProgressRingsView: View {
                 HStack(spacing: 16) {
                     ProgressRingView(title: "Skill",
                                      systemName: "text.book.closed",
-                                     progress: 0.9)
+                                     progress: rings.skill)
                     
                     ProgressRingView(title: "Fitness",
                                      systemName: "figure.walk",
-                                     progress: 0.5)
+                                     progress: rings.fitness)
                     
                     ProgressRingView(title: "NS",
                                      systemName: "shield",
-                                     progress: 0.8)
+                                     progress: rings.nationalService)
                 }
                 .padding(.horizontal, 21)
             }
@@ -40,6 +40,8 @@ struct ProgressRingsView: View {
 
 struct ProgressRingsView_Previews: PreviewProvider {
     static var previews: some View {
-        ProgressRingsView(userViewModel: .init())
+        ProgressRingsView(rings: .init(skill: 0,
+                                       fitness: 0,
+                                       nationalService: 0))
     }
 }

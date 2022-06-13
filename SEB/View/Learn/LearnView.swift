@@ -14,7 +14,7 @@ struct LearnView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                ProgressRingsView(userViewModel: userViewModel)
+                ProgressRingsView(rings: userViewModel.rings)
                 CoursesView()
                 ExploreView()
             }
