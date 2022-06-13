@@ -15,4 +15,6 @@ class UserViewModel: ObservableObject {
     }
     
     var allCourses: [Course] = Course.dummy
+    
+    var rings = Rings(skill: 0, fitness: 0.5, nationalService: 0.9)
 }

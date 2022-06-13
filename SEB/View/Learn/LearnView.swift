@@ -14,9 +14,9 @@ struct LearnView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                ProgressRingsView(userViewModel: userViewModel)
-                CoursesView()
-                ExploreView()
+                ProgressRingsView(rings: userViewModel.rings)
+                CoursesView(userViewModel: userViewModel)
+                ExploreView(userViewModel: userViewModel)
             }
             .navigationTitle("Hi Rui Yang!")
         }

@@ -8,23 +8,37 @@
 import SwiftUI
 
 struct ExploreView: View {
+    
+    @ObservedObject var userViewModel: UserViewModel
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text("Explore")
                 .font(.headline)
                 .padding(.leading, 21)
+                .frame(maxWidth: .infinity, alignment: .leading)
             
-            ForEach(0..<10) { _ in
-                CourseCardView(course: .sample)
-                    .aspectRatio(1.7, contentMode: .fit)
+            if userViewModel.suggestedCourses.isEmpty {
+                VStack(alignment: .center) {
+                    Text("No new courses 😔")
+                        .bold()
+                    Text("Come back again next time.")
+                }
+                .frame(maxWidth: .infinity)
+                .padding()
+            } else {
+                ForEach(userViewModel.suggestedCourses) { course in
+                    CourseCardView(course: course)
+                        .aspectRatio(1.7, contentMode: .fit)
+                }
+                .padding(.horizontal, 21)
             }
-            .padding(.horizontal, 21)
         }
     }
 }
 
 struct ExploreView_Previews: PreviewProvider {
     static var previews: some View {
-        ExploreView()
+        ExploreView(userViewModel: .init())
     }
 }
