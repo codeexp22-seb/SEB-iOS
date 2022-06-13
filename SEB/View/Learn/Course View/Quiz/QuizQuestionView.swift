@@ -15,6 +15,7 @@ struct QuizQuestionView: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("Question \(questionIndex + 1):")
+                .font(.system(size: 15, weight: .bold))
             
             Text(quizQuestion.title)
                 .multilineTextAlignment(.leading)

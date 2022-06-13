@@ -21,7 +21,20 @@ struct QuizView: View {
                     let questionIndex = questions.firstIndex(of: question)!
                     
                     QuizQuestionView(questionIndex: questionIndex, quizQuestion: question)
+                        .padding(.top)
                 }
+                
+                Button {
+                    
+                } label: {
+                    Text("Submit")
+                        .foregroundColor(.white)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.accentColor)
+                        .cornerRadius(8)
+                }
+                .padding(.top)
             }
         }
     }
