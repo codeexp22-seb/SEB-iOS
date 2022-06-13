@@ -57,7 +57,7 @@ struct CourseView: View {
                     
                     CourseProgressView(progress: 0.5)
                 }
-                .padding(.top, UIApplication.shared.windows.first!.safeAreaInsets.top)
+                .padding(.top, .topSafeAreaInset)
                 .padding(21)
                 .frame(maxWidth: .infinity, alignment: .leading)
             }

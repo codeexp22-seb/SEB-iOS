@@ -12,6 +12,7 @@
 		328303492856501C00414E6E /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328303482856501C00414E6E /* ExploreView.swift */; };
 		328A3BF82856644100FA0F6D /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3BF72856644100FA0F6D /* CourseView.swift */; };
 		328A3BFB2856667C00FA0F6D /* CourseBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3BFA2856667C00FA0F6D /* CourseBannerView.swift */; };
+		328A3BFE2856FBF600FA0F6D /* CGFloat+SafeAreaInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328A3BFD2856FBF600FA0F6D /* CGFloat+SafeAreaInsets.swift */; };
 		328F794C2856142B00E65FEB /* SEBApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328F794B2856142B00E65FEB /* SEBApp.swift */; };
 		328F794E2856142B00E65FEB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328F794D2856142B00E65FEB /* ContentView.swift */; };
 		328F79502856142D00E65FEB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 328F794F2856142D00E65FEB /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 		328303482856501C00414E6E /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		328A3BF72856644100FA0F6D /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
 		328A3BFA2856667C00FA0F6D /* CourseBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseBannerView.swift; sourceTree = "<group>"; };
+		328A3BFD2856FBF600FA0F6D /* CGFloat+SafeAreaInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+SafeAreaInsets.swift"; sourceTree = "<group>"; };
 		328F79482856142B00E65FEB /* SEB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SEB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		328F794B2856142B00E65FEB /* SEBApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SEBApp.swift; sourceTree = "<group>"; };
 		328F794D2856142B00E65FEB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -105,6 +107,14 @@
 			path = "Course View";
 			sourceTree = "<group>";
 		};
+		328A3BFC2856FBEB00FA0F6D /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				328A3BFD2856FBF600FA0F6D /* CGFloat+SafeAreaInsets.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		328F793F2856142B00E65FEB = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				328F794B2856142B00E65FEB /* SEBApp.swift */,
+				328A3BFC2856FBEB00FA0F6D /* Constants */,
 				328F795B28561AA300E65FEB /* View Model */,
 				328F795A28561A9E00E65FEB /* View */,
 				328F795928561A9700E65FEB /* Model */,
@@ -341,6 +352,7 @@
 				328F794E2856142B00E65FEB /* ContentView.swift in Sources */,
 				328F796A28561CC500E65FEB /* ProgressRingView.swift in Sources */,
 				32830346285649E200414E6E /* CourseProgressView.swift in Sources */,
+				328A3BFE2856FBF600FA0F6D /* CGFloat+SafeAreaInsets.swift in Sources */,
 				328303492856501C00414E6E /* ExploreView.swift in Sources */,
 				328F795D28561B0D00E65FEB /* CircularProgressView.swift in Sources */,
 				328F794C2856142B00E65FEB /* SEBApp.swift in Sources */,
