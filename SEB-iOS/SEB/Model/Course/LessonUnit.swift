@@ -11,5 +11,4 @@ struct LessonUnit: Codable, Equatable {
     var title: String
     
     var unitContents: [UnitRichText]
-    var quiz: [QuizQuestion]
 }

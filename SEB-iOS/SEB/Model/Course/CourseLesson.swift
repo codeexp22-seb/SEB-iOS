@@ -13,4 +13,6 @@ struct CourseLesson: Codable, Identifiable, Equatable {
     var description: String
     
     var lessonUnit: [LessonUnit]
+    
+    var quiz: [QuizQuestion]
 }
