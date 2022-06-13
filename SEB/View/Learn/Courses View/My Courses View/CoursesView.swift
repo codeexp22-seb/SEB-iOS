@@ -8,15 +8,20 @@
 import SwiftUI
 
 struct CoursesView: View {
+    
+    @ObservedObject var userViewModel: UserViewModel
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Text("Your Courses")
                 .font(.headline)
                 .padding(.leading, 21)
+            
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
-                    ForEach(0..<10) { _ in
-                        CourseCardView(chaptersCompleted: 2, course: .sample)
+                    ForEach(userViewModel.userCourses) { course in
+                        CourseCardView(chaptersCompleted: 2,
+                                       course: course)
                             .frame(width: 300, height: 230)
                     }
                 }
@@ -30,6 +35,6 @@ struct CoursesView: View {
 
 struct CoursesView_Previews: PreviewProvider {
     static var previews: some View {
-        CoursesView()
+        CoursesView(userViewModel: .init())
     }
 }

@@ -15,8 +15,8 @@ struct LearnView: View {
         NavigationView {
             ScrollView {
                 ProgressRingsView(rings: userViewModel.rings)
-                CoursesView()
-                ExploreView()
+                CoursesView(userViewModel: userViewModel)
+                ExploreView(userViewModel: userViewModel)
             }
             .navigationTitle("Hi Rui Yang!")
         }
