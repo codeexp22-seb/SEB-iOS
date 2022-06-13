@@ -16,7 +16,7 @@ extension LessonUnit {
                                     UnitRichText(text: URL.sampleImage.absoluteString,
                                                  type: .image)
                                    ],
-                                   quiz: [
+                                   quiz: [.sample,
                                     QuizQuestion(title: "What is a potato", correctOptionIndex: 1, options: [
                                         UnitRichText(text: "A potato", type: .plainText),
                                         UnitRichText(text: "A tomato", type: .plainText),
