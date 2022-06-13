@@ -12,22 +12,26 @@ struct CourseBannerView: View {
     var bannerURL: URL
     
     var body: some View {
-        Rectangle()
-            .fill(.linearGradient(colors: [
+        ZStack {
+            Rectangle()
+                .fill(.clear)
+                .background(
+                    AsyncImage(url: bannerURL) { image in
+                        image
+                            .resizable()
+                            .scaledToFill()
+                    } placeholder: {
+                        Color.accentColor.opacity(0.1)
+                    }
+                )
+            LinearGradient(colors: [
                 Color(.systemBackground).opacity(0),
                 Color(.systemBackground)
-            ], startPoint: .top, endPoint: .bottom))
-            .background(
-                AsyncImage(url: bannerURL) { image in
-                    image
-                        .resizable()
-                        .scaledToFill()
-                } placeholder: {
-                    Color.accentColor.opacity(0.1)
-                }
-            )
-            .frame(maxWidth: .infinity)
-            .aspectRatio(4.2/2.6, contentMode: .fit)
+            ], startPoint: .top, endPoint: .bottom)
+            .padding(.horizontal, -8)
+        }
+        .frame(maxWidth: .infinity)
+        .aspectRatio(4.2/2.6, contentMode: .fit)
     }
 }
 
