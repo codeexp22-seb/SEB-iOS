@@ -18,4 +18,8 @@ struct Course: Codable, Identifiable {
     var courseBannerURL: URL
     
     var lesson: [CourseLesson]
+    
+    var badgeQuiz: [QuizQuestion]
+    
+    var badgeQuizImage: URL
 }

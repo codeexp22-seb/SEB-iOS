@@ -11,16 +11,22 @@ extension Course {
     static var sample = Course(title: "Intro to Swift",
                                description: "Potato",
                                categories: [.skill, .nationalService],
-                               courseBannerURL: URL(string: "https://tinkercademy.com/wp-content/uploads/2019/05/IMG_8168.jpg")!,
+                               courseBannerURL: .sampleImage,
                                lesson: [
                                 CourseLesson(title: "aaa",
-                                             description: "",
+                                             description: "a",
                                              lessonUnit: []),
                                 CourseLesson(title: "aaa",
-                                             description: "",
+                                             description: "description",
                                              lessonUnit: []),
                                 CourseLesson(title: "aaa",
-                                             description: "",
+                                             description: "potato",
                                              lessonUnit: [])
-                               ])
+                               ],
+                               badgeQuiz: [
+                                QuizQuestion(title: "Test Question", correctOptionIndex: 1, options: [
+                                    UnitRichText(text: "Test", type: .code)
+                                ])
+                               ],
+                               badgeQuizImage: URL(string: "https://user-images.githubusercontent.com/36725840/173285564-e8f87735-616a-4b42-8cd3-f6fe6ac9a435.png")!)
 }
