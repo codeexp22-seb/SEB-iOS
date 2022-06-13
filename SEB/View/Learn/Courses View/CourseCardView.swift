@@ -37,14 +37,17 @@ struct CourseCardView: View {
                         .font(.title2)
                         .bold()
                         .multilineTextAlignment(.leading)
+                        .foregroundColor(Color(uiColor: .label))
                     
                     HStack(spacing: 4) {
                         if let chaptersCompleted = chaptersCompleted {
                             Text("\(chaptersCompleted)/\(course.lesson.count) chapters •")
                                 .font(.subheadline)
+                                .foregroundColor(Color(uiColor: .label))
                         } else {
                             Text("\(course.lesson.count) chapters •")
                                 .font(.subheadline)
+                                .foregroundColor(Color(uiColor: .label))
                         }
                         
                         ForEach(course.categories, id: \.rawValue) { category in
@@ -59,6 +62,7 @@ struct CourseCardView: View {
                         Text(course.description)
                             .font(.subheadline)
                             .multilineTextAlignment(.leading)
+                            .foregroundColor(Color(uiColor: .label))
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
