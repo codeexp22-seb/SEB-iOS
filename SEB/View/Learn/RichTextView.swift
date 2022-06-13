@@ -44,11 +44,14 @@ struct RichTextView: View {
                         .scaledToFit()
                         .cornerRadius(8)
                 } placeholder: {
-                    HStack {
-                        Spacer()
-                        Image(systemName: "arrow.down.circle")
-                            .padding()
-                        Spacer()
+                    VStack {
+                        HStack {
+                            Spacer()
+                            Image(systemName: "arrow.down.circle")
+                                .padding()
+                            Spacer()
+                        }
+                        Text("Loading image…")
                     }
                 }
             } else {
