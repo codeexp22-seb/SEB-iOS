@@ -15,8 +15,7 @@ struct LessonView: View {
     var courseLesson: CourseLesson
     
     var body: some View {
-        VStack {
-            
+        VStack(alignment: .leading) {
             Button {
                 presentationMode.wrappedValue.dismiss()
             } label: {
@@ -24,9 +23,40 @@ struct LessonView: View {
                     .imageScale(.large)
                     .foregroundColor(Color(.label))
             }
+            .padding(21)
+            
+            Text(courseLesson.title)
+                .font(.system(size: 24, weight: .bold))
+                .padding(.horizontal, 21)
             
             UnitView(lesson: courseLesson.lessonUnit[currentUnit])
+                .padding(.horizontal, 21)
+            
+            HStack {
+                Button {
+                    currentUnit -= 1
+                } label: {
+                    Image(systemName: "arrow.backward")
+                }
+                .disabled(currentUnit == 0)
+                
+                Spacer()
+                
+                Text("\(currentUnit + 1) of \(courseLesson.lessonUnit.count)")
+                
+                Spacer()
+                
+                Button {
+                    currentUnit += 1
+                } label: {
+                    Image(systemName: "arrow.forward")
+                }
+                .disabled(currentUnit == courseLesson.lessonUnit.count - 1)
+            }
+            .font(.system(size: 20, weight: .bold))
+            .padding(21)
         }
+        .frame(maxWidth: .infinity, alignment: .leading)
         
     }
 }

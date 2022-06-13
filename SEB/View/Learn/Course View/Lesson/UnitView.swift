@@ -12,12 +12,14 @@ struct UnitView: View {
     var lesson: LessonUnit
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Text(lesson.title)
-                .font(.system(size: 20, weight: .bold))
-            
-            ForEach(lesson.unitContents, id: \.text) { content in
-                RichTextView(unitRichText: content)
+        ScrollView {
+            VStack(alignment: .leading) {
+                Text(lesson.title)
+                    .font(.system(size: 20, weight: .bold))
+                
+                ForEach(lesson.unitContents, id: \.text) { content in
+                    RichTextView(unitRichText: content)
+                }
             }
         }
     }
