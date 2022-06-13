@@ -22,5 +22,10 @@ extension Course {
                                 CourseLesson(title: "aaa",
                                              description: "potato",
                                              lessonUnit: [])
+                               ],
+                               badgeQuiz: [
+                                QuizQuestion(title: "Test Question", correctOptionIndex: 1, options: [
+                                    UnitRichText(text: "Test", type: .code)
+                                ])
                                ])
 }
