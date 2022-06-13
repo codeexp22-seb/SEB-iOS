@@ -45,6 +45,7 @@
 		32D74D12285637B400674AFE /* RichTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D74D11285637B400674AFE /* RichTextView.swift */; };
 		32D74D142856390600674AFE /* CoursesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D74D132856390600674AFE /* CoursesView.swift */; };
 		32D74D182856395100674AFE /* CourseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D74D172856395100674AFE /* CourseCardView.swift */; };
+		32DE62AD2857A61A00553FE1 /* Course+DummyCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62AC2857A61A00553FE1 /* Course+DummyCourse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +88,7 @@
 		32D74D11285637B400674AFE /* RichTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichTextView.swift; sourceTree = "<group>"; };
 		32D74D132856390600674AFE /* CoursesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesView.swift; sourceTree = "<group>"; };
 		32D74D172856395100674AFE /* CourseCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCardView.swift; sourceTree = "<group>"; };
+		32DE62AC2857A61A00553FE1 /* Course+DummyCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Course+DummyCourse.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				32D74CFA2856264000674AFE /* Course.swift */,
+				32DE62AC2857A61A00553FE1 /* Course+DummyCourse.swift */,
 				32D74CFE2856271100674AFE /* CourseLesson.swift */,
 				32D74D002856277E00674AFE /* LessonUnit.swift */,
 				32D74D02285627C400674AFE /* UnitRichText.swift */,
@@ -414,6 +417,7 @@
 				32D74D05285627D600674AFE /* UnitRichText+TextType.swift in Sources */,
 				32D74D0E28562CFA00674AFE /* User.swift in Sources */,
 				328F796128561B5A00E65FEB /* BadgesView.swift in Sources */,
+				32DE62AD2857A61A00553FE1 /* Course+DummyCourse.swift in Sources */,
 				32D74CFF2856271100674AFE /* CourseLesson.swift in Sources */,
 				328A3C0528570AD300FA0F6D /* UnitView.swift in Sources */,
 				32D74D0A28562CAB00674AFE /* UserViewModel.swift in Sources */,
