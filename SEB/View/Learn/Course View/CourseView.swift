@@ -9,15 +9,19 @@ import SwiftUI
 
 struct CourseView: View {
     
+    var completedChapters: Int?
     var course: Course
     
     var body: some View {
         VStack {
-            CourseHeaderView(course: course)
+            CourseHeaderView(course: course, completedChapters: completedChapters)
             
             ScrollView {
                 VStack(spacing: 0) {
                     ForEach(course.lesson) { lesson in
+                        let lessonIndex = course.lesson.firstIndex(of: lesson)!
+                        let isCompletedLesson = lessonIndex < completedChapters ?? 0
+                        
                         VStack(alignment: .leading) {
                             Text(lesson.title)
                                 .font(.system(size: 24, weight: .bold))
@@ -25,15 +29,19 @@ struct CourseView: View {
                                 .font(.system(size: 15, weight: .regular))
                                 .multilineTextAlignment(.leading)
                         }
+                        .foregroundColor(isCompletedLesson ? .white : Color(uiColor: .label))
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding()
-                        .background(Color(.systemGray6))
+                        .background(isCompletedLesson ? Color.accentColor : Color(.systemGray6))
                         .cornerRadius(8)
                         .padding(.horizontal)
                         
+                        let isNextLessonCompleted = (lessonIndex + 1) < completedChapters ?? 0
+                        
                         Rectangle()
-                            .fill(Color(.systemGray6).opacity(0.5))
+                            .fill(isNextLessonCompleted ? Color.accentColor : Color(.systemGray6))
                             .frame(width: 8, height: 16)
+                            .opacity(0.5)
                     }
                     
                     VStack(alignment: .leading) {
@@ -48,7 +56,6 @@ struct CourseView: View {
                                     .scaledToFit()
                             }
                             .frame(height: 32)
-
                             
                             Text("Quiz")
                                 .font(.system(size: 24, weight: .bold))

@@ -75,7 +75,7 @@ struct CourseCardView: View {
         .background(Color(uiColor: .systemBackground).cornerRadius(8)
             .shadow(color: .black.opacity(0.1), radius: 6))
         .fullScreenCover(isPresented: $isCoursePresented) {
-            CourseView(course: course)
+            CourseView(completedChapters: 2, course: course)
         }
     }
 }

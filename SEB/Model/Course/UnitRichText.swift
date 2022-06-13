@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct UnitRichText: Codable {
+struct UnitRichText: Codable, Equatable {
     var text: String
     
     var type: TextType
