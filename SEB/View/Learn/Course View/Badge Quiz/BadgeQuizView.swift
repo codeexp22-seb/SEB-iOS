@@ -72,7 +72,9 @@ struct BadgeQuizView: View {
             }
             .padding(.top)
             .fullScreenCover(item: $badge) { badge in
-                BadgeResultSuccessView(badge: badge)
+                BadgeResultSuccessView(badge: badge) {
+                    presentationMode.wrappedValue.dismiss()
+                }
             }
             .padding(21)
         }

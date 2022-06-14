@@ -391,8 +391,8 @@
 			isa = PBXGroup;
 			children = (
 				32DE62E32858EFA600553FE1 /* BadgeQuizView.swift */,
-				32DE62E72858FDB500553FE1 /* BadgeResultSuccessView.swift */,
 				32DE62E52858F43F00553FE1 /* BadgeQuizHeader.swift */,
+				32DE62E72858FDB500553FE1 /* BadgeResultSuccessView.swift */,
 			);
 			path = "Badge Quiz";
 			sourceTree = "<group>";

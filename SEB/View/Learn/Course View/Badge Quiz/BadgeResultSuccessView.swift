@@ -10,7 +10,11 @@ import UniformTypeIdentifiers
 
 struct BadgeResultSuccessView: View {
     
+    @Environment(\.presentationMode) var presentationMode
+    
     var badge: Badge
+    
+    var onDismiss: (() -> Void)
     
     var body: some View {
         VStack {
@@ -58,12 +62,27 @@ struct BadgeResultSuccessView: View {
                 .cornerRadius(8)
             }
             .padding()
+            
+            Spacer()
+            
+            Button {
+                presentationMode.wrappedValue.dismiss()
+                onDismiss()
+            } label: {
+                Text("Done")
+                    .padding()
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity)
+                    .background(Color.accentColor)
+                    .cornerRadius(8)
+            }
+            .padding(21)
         }
     }
 }
 
 struct BadgeResultSuccessView_Previews: PreviewProvider {
     static var previews: some View {
-        BadgeResultSuccessView(badge: .sample)
+        BadgeResultSuccessView(badge: .sample) {}
     }
 }
