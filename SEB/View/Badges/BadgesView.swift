@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct BadgesView: View {
+    
+    var badges: [Badge]
+    
     var body: some View {
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: [.init(.adaptive(minimum: 96), spacing: 32)]) {
-                    ForEach(0..<100) { _ in
-                        BadgeView(badge: .sample)
+                    ForEach(badges) { badge in
+                        BadgeView(badge: badge)
                     }
                 }
                 .padding(21)
@@ -25,6 +28,6 @@ struct BadgesView: View {
 
 struct BadgesView_Previews: PreviewProvider {
     static var previews: some View {
-        BadgesView()
+        BadgesView(badges: [.sample])
     }
 }
