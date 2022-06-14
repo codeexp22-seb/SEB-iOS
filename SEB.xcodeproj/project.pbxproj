@@ -55,6 +55,7 @@
 		32DE62C02857B7D500553FE1 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 32DE62BF2857B7D500553FE1 /* FirebaseFirestoreCombine-Community */; };
 		32DE62C22857B7D500553FE1 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 32DE62C12857B7D500553FE1 /* FirebaseFirestoreSwift */; };
 		32DE62C42857B8D100553FE1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 32DE62C32857B8D100553FE1 /* GoogleService-Info.plist */; };
+		32DE62C628584B4900553FE1 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62C528584B4900553FE1 /* Badge.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,7 @@
 		32DE62AC2857A61A00553FE1 /* Course+DummyCourse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Course+DummyCourse.swift"; sourceTree = "<group>"; };
 		32DE62B02857AFC700553FE1 /* Rings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rings.swift; sourceTree = "<group>"; };
 		32DE62C32857B8D100553FE1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		32DE62C528584B4900553FE1 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +228,7 @@
 			children = (
 				32D74D0C28562CD800674AFE /* User */,
 				32D74D0B28562CD100674AFE /* Course */,
+				32DE62C528584B4900553FE1 /* Badge.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 				3238FD18285726CD00550781 /* QuizQuestionView.swift in Sources */,
 				328F795F28561B5100E65FEB /* LearnView.swift in Sources */,
 				32D74D012856277E00674AFE /* LessonUnit.swift in Sources */,
+				32DE62C628584B4900553FE1 /* Badge.swift in Sources */,
 				328A3BF82856644100FA0F6D /* CourseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

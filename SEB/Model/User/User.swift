@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct User {
+struct User: Codable {
     var userID: String // Firebase UID
-    
+    var username: String
 }
