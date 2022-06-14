@@ -13,22 +13,37 @@ extension Course {
     // 3 units that are just names
     static let dummy: [Course] = [
         Course(title: "Intro to Swift",
-               description: "Potato",
+               description: "Learn the basics of iOS development with Apple’s  programming language, Swift!",
                categories: [.skill, .nationalService],
                courseBannerURL: .sampleImage,
                lesson: [
-                CourseLesson(title: "Producing a Namecard Application", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
-                CourseLesson(title: "Intro to Swift 1", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
-                CourseLesson(title: "Clicker: Interactivity and Labels", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
-                CourseLesson(title: "Intro to Swift 2", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
-                CourseLesson(title: "Arrays & Jokes App", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
-                CourseLesson(title: "Intro to Swift 3: Classes and Structs", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
-                CourseLesson(title: "ListView and Your Friends", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
-                CourseLesson(title: "Capstone Quiz", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample])
+                CourseLesson(title: "Producing a Namecard Application", description: "Learn the basics of SwiftUI by building a namecard", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
+                CourseLesson(title: "Intro to Swift 1", description: "Learn about variables, types and more!", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
+                CourseLesson(title: "Clicker: Interactivity and Labels", description: "Create your very first app! A clicker", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
+                CourseLesson(title: "Intro to Swift 2", description: "Learn about arrays, structs and closures", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
+                CourseLesson(title: "Arrays & Jokes App", description: "Create an app based on what you've learnt", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
+                CourseLesson(title: "Intro to Swift 3: Classes and Optionals", description: "Learn about optional unwrapping and how to use optionals.", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
+                CourseLesson(title: "ListView and Your Friends", description: "Use (Create-Read-Update-Delete) CRUD to build a simple app", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample])
                ],
                badgeQuiz: [
-                QuizQuestion(title: "Test Question", correctOptionIndex: 1, options: [
-                    UnitRichText(text: "Test", type: .code)
+                QuizQuestion(title: "What is a HStack", correctOptionIndex: 1, options: [
+                    UnitRichText(text: "Horizontal Stack View", type: .plainText),
+                    UnitRichText(text: "Vertical Stack View", type: .plainText),
+                    UnitRichText(text: "Align items automatically", type: .plainText),
+                    UnitRichText(text: "This view does not exist", type: .plainText)
+                ]),
+                QuizQuestion(title: "What is the difference between a class and struct?", correctOptionIndex: 1, options: [
+                    UnitRichText(text: "A `struct` is pass by reference while a `class` is pass by copy", type: .markdown),
+                    UnitRichText(text: "Classes are lighter weight than structs", type: .plainText),
+                    UnitRichText(text: "A `struct` is pass by copy while a `class` is pass by reference", type: .markdown),
+                    UnitRichText(text: "*Spelling*?", type: .markdown)
+                ]),
+                QuizQuestion(title: "How do you declare a @State variable", correctOptionIndex: 3, options: [
+                    UnitRichText(text: "var x = 1", type: .code),
+                    UnitRichText(text: "stateVar x = 1", type: .code),
+                    UnitRichText(text: "x = 1", type: .code),
+                    UnitRichText(text: "@State var x = 1", type: .code),
+                    UnitRichText(text: "@state var x = 1", type: .code)
                 ])
                ],
                badgeQuizImage: URL(string: "https://user-images.githubusercontent.com/36725840/173285564-e8f87735-616a-4b42-8cd3-f6fe6ac9a435.png")!),

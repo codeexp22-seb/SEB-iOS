@@ -67,6 +67,14 @@
 		32DE62DC2858AC0E00553FE1 /* QuestionAndAnswers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62DB2858AC0E00553FE1 /* QuestionAndAnswers.swift */; };
 		32DE62DF2858AF8300553FE1 /* QuizResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62DE2858AF8300553FE1 /* QuizResultsView.swift */; };
 		32DE62E12858B1DA00553FE1 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62E02858B1DA00553FE1 /* QuizViewModel.swift */; };
+		32DE62E42858EFA600553FE1 /* BadgeQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62E32858EFA600553FE1 /* BadgeQuizView.swift */; };
+		32DE62E62858F43F00553FE1 /* BadgeQuizHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62E52858F43F00553FE1 /* BadgeQuizHeader.swift */; };
+		32DE62E82858FDB500553FE1 /* BadgeResultSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62E72858FDB500553FE1 /* BadgeResultSuccessView.swift */; };
+		32DE62EA28590CEB00553FE1 /* ScratchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62E928590CEB00553FE1 /* ScratchView.swift */; };
+		32DE62EC28590E9600553FE1 /* ScratchViewUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62EB28590E9600553FE1 /* ScratchViewUI.swift */; };
+		32DE62EE2859191D00553FE1 /* ScratchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62ED2859191D00553FE1 /* ScratchDelegate.swift */; };
+		32DE62F028591BC200553FE1 /* RedemptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62EF28591BC200553FE1 /* RedemptionView.swift */; };
+		32DE62F228591FC100553FE1 /* ScratchCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62F128591FC100553FE1 /* ScratchCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,6 +132,14 @@
 		32DE62DB2858AC0E00553FE1 /* QuestionAndAnswers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAndAnswers.swift; sourceTree = "<group>"; };
 		32DE62DE2858AF8300553FE1 /* QuizResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultsView.swift; sourceTree = "<group>"; };
 		32DE62E02858B1DA00553FE1 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
+		32DE62E32858EFA600553FE1 /* BadgeQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeQuizView.swift; sourceTree = "<group>"; };
+		32DE62E52858F43F00553FE1 /* BadgeQuizHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeQuizHeader.swift; sourceTree = "<group>"; };
+		32DE62E72858FDB500553FE1 /* BadgeResultSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeResultSuccessView.swift; sourceTree = "<group>"; };
+		32DE62E928590CEB00553FE1 /* ScratchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchView.swift; sourceTree = "<group>"; };
+		32DE62EB28590E9600553FE1 /* ScratchViewUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchViewUI.swift; sourceTree = "<group>"; };
+		32DE62ED2859191D00553FE1 /* ScratchDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchDelegate.swift; sourceTree = "<group>"; };
+		32DE62EF28591BC200553FE1 /* RedemptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedemptionView.swift; sourceTree = "<group>"; };
+		32DE62F128591FC100553FE1 /* ScratchCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +196,7 @@
 				3238FD142857110F00550781 /* CourseLessonRowView.swift */,
 				328A3C012856FFF000FA0F6D /* CourseHeaderView.swift */,
 				328A3BFA2856667C00FA0F6D /* CourseBannerView.swift */,
+				32DE62E22858EF9F00553FE1 /* Badge Quiz */,
 				328A3C0328570AB200FA0F6D /* Lesson */,
 				3238FD16285726C400550781 /* Quiz */,
 			);
@@ -307,6 +324,11 @@
 			isa = PBXGroup;
 			children = (
 				328F796228561B6100E65FEB /* ProfileView.swift */,
+				32DE62F128591FC100553FE1 /* ScratchCardView.swift */,
+				32DE62EF28591BC200553FE1 /* RedemptionView.swift */,
+				32DE62E928590CEB00553FE1 /* ScratchView.swift */,
+				32DE62EB28590E9600553FE1 /* ScratchViewUI.swift */,
+				32DE62ED2859191D00553FE1 /* ScratchDelegate.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -378,6 +400,16 @@
 				32DE62DE2858AF8300553FE1 /* QuizResultsView.swift */,
 			);
 			path = "Quiz Completion";
+			sourceTree = "<group>";
+		};
+		32DE62E22858EF9F00553FE1 /* Badge Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				32DE62E32858EFA600553FE1 /* BadgeQuizView.swift */,
+				32DE62E52858F43F00553FE1 /* BadgeQuizHeader.swift */,
+				32DE62E72858FDB500553FE1 /* BadgeResultSuccessView.swift */,
+			);
+			path = "Badge Quiz";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -489,7 +521,9 @@
 				32DE62D22858737F00553FE1 /* BadgeView.swift in Sources */,
 				328A3C0728570C8600FA0F6D /* LessonUnit+Preview.swift in Sources */,
 				32DE62B12857AFC700553FE1 /* Rings.swift in Sources */,
+				32DE62EE2859191D00553FE1 /* ScratchDelegate.swift in Sources */,
 				32DE62E12858B1DA00553FE1 /* QuizViewModel.swift in Sources */,
+				32DE62E82858FDB500553FE1 /* BadgeResultSuccessView.swift in Sources */,
 				32D74D1028562DE700674AFE /* QuizQuestion.swift in Sources */,
 				32D74D182856395100674AFE /* CourseCardView.swift in Sources */,
 				32DE62D42858739700553FE1 /* Badge+Preview.swift in Sources */,
@@ -500,6 +534,7 @@
 				328A3C002856FD0F00FA0F6D /* URL+Preview.swift in Sources */,
 				328F794E2856142B00E65FEB /* ContentView.swift in Sources */,
 				3238FD1C285728A700550781 /* QuizOptionRichText.swift in Sources */,
+				32DE62F028591BC200553FE1 /* RedemptionView.swift in Sources */,
 				328F796A28561CC500E65FEB /* ProgressRingView.swift in Sources */,
 				32830346285649E200414E6E /* CourseProgressView.swift in Sources */,
 				328A3BFE2856FBF600FA0F6D /* CGFloat+SafeAreaInsets.swift in Sources */,
@@ -512,14 +547,18 @@
 				328A3C022856FFF000FA0F6D /* CourseHeaderView.swift in Sources */,
 				328303492856501C00414E6E /* ExploreView.swift in Sources */,
 				328F795D28561B0D00E65FEB /* CircularProgressView.swift in Sources */,
+				32DE62E42858EFA600553FE1 /* BadgeQuizView.swift in Sources */,
 				32DE62CB28584D1000553FE1 /* AuthenticationViewModel.swift in Sources */,
 				328F794C2856142B00E65FEB /* SEBApp.swift in Sources */,
+				32DE62E62858F43F00553FE1 /* BadgeQuizHeader.swift in Sources */,
 				3283034428563CC900414E6E /* Course+Preview.swift in Sources */,
 				3238FD1A2857279C00550781 /* QuizQuestion+Sample.swift in Sources */,
 				32D74D12285637B400674AFE /* RichTextView.swift in Sources */,
 				32D74D05285627D600674AFE /* UnitRichText+TextType.swift in Sources */,
+				32DE62F228591FC100553FE1 /* ScratchCardView.swift in Sources */,
 				32D74D0E28562CFA00674AFE /* User.swift in Sources */,
 				328F796128561B5A00E65FEB /* BadgesView.swift in Sources */,
+				32DE62EC28590E9600553FE1 /* ScratchViewUI.swift in Sources */,
 				32DE62AD2857A61A00553FE1 /* Course+DummyCourse.swift in Sources */,
 				32D74CFF2856271100674AFE /* CourseLesson.swift in Sources */,
 				328A3C0528570AD300FA0F6D /* UnitView.swift in Sources */,
@@ -530,6 +569,7 @@
 				32D74D142856390600674AFE /* CoursesView.swift in Sources */,
 				32DE62D82858887700553FE1 /* BadgesViewModel.swift in Sources */,
 				328F796828561C9F00E65FEB /* ProgressRingsView.swift in Sources */,
+				32DE62EA28590CEB00553FE1 /* ScratchView.swift in Sources */,
 				3238FD18285726CD00550781 /* QuizQuestionView.swift in Sources */,
 				328F795F28561B5100E65FEB /* LearnView.swift in Sources */,
 				32D74D012856277E00674AFE /* LessonUnit.swift in Sources */,

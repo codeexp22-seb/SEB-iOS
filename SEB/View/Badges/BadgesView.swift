@@ -9,25 +9,32 @@ import SwiftUI
 
 struct BadgesView: View {
     
-    var badges: [Badge]
+    @StateObject var badgesViewModel = BadgesViewModel()
     
     var body: some View {
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: [.init(.adaptive(minimum: 96), spacing: 32)]) {
-                    ForEach(badges) { badge in
+                    ForEach(badgesViewModel.badges) { badge in
                         BadgeView(badge: badge)
                     }
                 }
                 .padding(21)
             }
             .navigationTitle("Badges")
+            .toolbar {
+                Button {
+                    badgesViewModel.loadBadges()
+                } label: {
+                    Image(systemName: "arrow.clockwise")
+                }
+            }
         }
     }
 }
 
 struct BadgesView_Previews: PreviewProvider {
     static var previews: some View {
-        BadgesView(badges: [.sample])
+        BadgesView()
     }
 }
