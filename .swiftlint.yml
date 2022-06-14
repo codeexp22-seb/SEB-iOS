@@ -12,3 +12,4 @@ identifier_name:
     - db
 excluded:
   - SEB/Preview Content/
+  - SEB/Model/Course/Course+DummyCourse.swift

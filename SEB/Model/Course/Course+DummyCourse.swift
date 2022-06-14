@@ -54,7 +54,11 @@ extension Course {
                     UnitRichText(text: "Test", type: .code)
                 ])
                ], badgeQuizImage: URL(string: "https://user-images.githubusercontent.com/36725840/173580871-05b2ad8e-d0ea-41c1-9fff-2d0299344c98.png")!),
-        Course(title: "Building a Culture of Respect and Consent ❤️", description: "The course aims to raise awareness and educate the NUS community on an inclusive and respectful campus, workplace culture — as well as to sustain a conversation on issues related to these topics.", categories: [.nationalService], courseBannerURL: .sampleImage, lesson: [
+        Course(title: "Building a Culture of Respect and Consent ❤️",
+               description: """
+The course aims to raise awareness and educate the NUS community on an inclusive and respectful campus, workplace culture — as well as to sustain a conversation on issues related to these topics.
+""",
+               categories: [.nationalService], courseBannerURL: .sampleImage, lesson: [
             CourseLesson(title: "Consent is important", description: "Do you agree?", lessonUnit: [.sample], quiz: [.sample])
         ], badgeQuiz: [
             QuizQuestion(title: "Test Question", correctOptionIndex: 1, options: [

@@ -15,7 +15,7 @@ class UserViewModel: ObservableObject {
     
     let db: Firestore
     
-    var userCourses: [Course] = [.sample]
+    var userCourses: [Course] = [Course.dummy[0], Course.dummy[2]]
     
     var suggestedCourses: [Course] {
         return Array(Set(allCourses).subtracting(userCourses))
