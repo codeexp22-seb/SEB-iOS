@@ -67,6 +67,8 @@
 		32DE62DC2858AC0E00553FE1 /* QuestionAndAnswers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62DB2858AC0E00553FE1 /* QuestionAndAnswers.swift */; };
 		32DE62DF2858AF8300553FE1 /* QuizResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62DE2858AF8300553FE1 /* QuizResultsView.swift */; };
 		32DE62E12858B1DA00553FE1 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62E02858B1DA00553FE1 /* QuizViewModel.swift */; };
+		32DE62E42858EFA600553FE1 /* BadgeQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62E32858EFA600553FE1 /* BadgeQuizView.swift */; };
+		32DE62E62858F43F00553FE1 /* BadgeQuizHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62E52858F43F00553FE1 /* BadgeQuizHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,6 +126,8 @@
 		32DE62DB2858AC0E00553FE1 /* QuestionAndAnswers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAndAnswers.swift; sourceTree = "<group>"; };
 		32DE62DE2858AF8300553FE1 /* QuizResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultsView.swift; sourceTree = "<group>"; };
 		32DE62E02858B1DA00553FE1 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
+		32DE62E32858EFA600553FE1 /* BadgeQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeQuizView.swift; sourceTree = "<group>"; };
+		32DE62E52858F43F00553FE1 /* BadgeQuizHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeQuizHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +184,7 @@
 				3238FD142857110F00550781 /* CourseLessonRowView.swift */,
 				328A3C012856FFF000FA0F6D /* CourseHeaderView.swift */,
 				328A3BFA2856667C00FA0F6D /* CourseBannerView.swift */,
+				32DE62E22858EF9F00553FE1 /* Badge Quiz */,
 				328A3C0328570AB200FA0F6D /* Lesson */,
 				3238FD16285726C400550781 /* Quiz */,
 			);
@@ -380,6 +385,15 @@
 			path = "Quiz Completion";
 			sourceTree = "<group>";
 		};
+		32DE62E22858EF9F00553FE1 /* Badge Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				32DE62E32858EFA600553FE1 /* BadgeQuizView.swift */,
+				32DE62E52858F43F00553FE1 /* BadgeQuizHeader.swift */,
+			);
+			path = "Badge Quiz";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -512,8 +526,10 @@
 				328A3C022856FFF000FA0F6D /* CourseHeaderView.swift in Sources */,
 				328303492856501C00414E6E /* ExploreView.swift in Sources */,
 				328F795D28561B0D00E65FEB /* CircularProgressView.swift in Sources */,
+				32DE62E42858EFA600553FE1 /* BadgeQuizView.swift in Sources */,
 				32DE62CB28584D1000553FE1 /* AuthenticationViewModel.swift in Sources */,
 				328F794C2856142B00E65FEB /* SEBApp.swift in Sources */,
+				32DE62E62858F43F00553FE1 /* BadgeQuizHeader.swift in Sources */,
 				3283034428563CC900414E6E /* Course+Preview.swift in Sources */,
 				3238FD1A2857279C00550781 /* QuizQuestion+Sample.swift in Sources */,
 				32D74D12285637B400674AFE /* RichTextView.swift in Sources */,
