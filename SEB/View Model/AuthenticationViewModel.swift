@@ -48,7 +48,7 @@ class AuthenticationViewModel: ObservableObject {
                 authenticationErrorPresented = true
             } else if let result = result {
                 let user = User(name: name,
-                                rewards: [],
+                                credits: Credit(remaining: 0, total: 0),
                                 rings: .init(skill: 0, fitness: 0, nationalService: 0))
                 
                 let db = Firestore.firestore()
