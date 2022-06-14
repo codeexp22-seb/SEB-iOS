@@ -11,17 +11,21 @@ struct QuizView: View {
     
     var questions: [QuizQuestion]
     
+    @State var questionAndAnswers: [QuestionAndAnswers] = []
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
                 Text("Check your understanding")
                     .font(.system(size: 20, weight: .bold))
                 
-                ForEach(questions) { question in
-                    let questionIndex = questions.firstIndex(of: question)!
+                ForEach($questionAndAnswers) { $questionAndAnswer in
+                    let questionIndex = questionAndAnswers.firstIndex(of: questionAndAnswer)!
                     
-                    QuizQuestionView(questionIndex: questionIndex, quizQuestion: question)
-                        .padding(.top)
+                    QuizQuestionView(questionIndex: questionIndex,
+                                     quizQuestion: questionAndAnswer.question,
+                                     selectedIndex: $questionAndAnswer.answer)
+                    .padding(.top)
                 }
                 
                 Button {
@@ -36,6 +40,12 @@ struct QuizView: View {
                         .cornerRadius(8)
                 }
                 .padding(.top)
+
+            }
+        }
+        .onAppear {
+            questionAndAnswers = questions.map {
+                QuestionAndAnswers(question: $0)
             }
         }
     }

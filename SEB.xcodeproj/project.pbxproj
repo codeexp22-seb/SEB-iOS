@@ -64,6 +64,7 @@
 		32DE62D628587E1E00553FE1 /* BadgeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62D528587E1E00553FE1 /* BadgeDetailView.swift */; };
 		32DE62D82858887700553FE1 /* BadgesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62D72858887700553FE1 /* BadgesViewModel.swift */; };
 		32DE62DA28588E1F00553FE1 /* Credit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62D928588E1F00553FE1 /* Credit.swift */; };
+		32DE62DC2858AC0E00553FE1 /* QuestionAndAnswers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62DB2858AC0E00553FE1 /* QuestionAndAnswers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,6 +119,7 @@
 		32DE62D528587E1E00553FE1 /* BadgeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeDetailView.swift; sourceTree = "<group>"; };
 		32DE62D72858887700553FE1 /* BadgesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesViewModel.swift; sourceTree = "<group>"; };
 		32DE62D928588E1F00553FE1 /* Credit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credit.swift; sourceTree = "<group>"; };
+		32DE62DB2858AC0E00553FE1 /* QuestionAndAnswers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAndAnswers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,6 +316,7 @@
 				32D74D0F28562DE700674AFE /* QuizQuestion.swift */,
 				32D74D04285627D600674AFE /* UnitRichText+TextType.swift */,
 				32D74CFC2856267100674AFE /* CourseCategory.swift */,
+				32DE62DB2858AC0E00553FE1 /* QuestionAndAnswers.swift */,
 			);
 			path = Course;
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 				32830346285649E200414E6E /* CourseProgressView.swift in Sources */,
 				328A3BFE2856FBF600FA0F6D /* CGFloat+SafeAreaInsets.swift in Sources */,
 				32DE62C928584C8700553FE1 /* SignInView.swift in Sources */,
+				32DE62DC2858AC0E00553FE1 /* QuestionAndAnswers.swift in Sources */,
 				32DE62CF28586EDA00553FE1 /* UserViewModel+BadgeMint.swift in Sources */,
 				32DE62DA28588E1F00553FE1 /* Credit.swift in Sources */,
 				3238FD152857110F00550781 /* CourseLessonRowView.swift in Sources */,

@@ -12,7 +12,7 @@ struct QuizQuestionView: View {
     var questionIndex: Int
     var quizQuestion: QuizQuestion
     
-    @State var selectedIndex: Int?
+    @Binding var selectedIndex: Int?
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -43,6 +43,6 @@ struct QuizQuestionView_Previews: PreviewProvider {
                                                         UnitRichText(text: "`Text(Potato)` a", type: .markdown),
                                                         UnitRichText(text: "aaaa", type: .plainText),
                                                         UnitRichText(text: URL.sampleImage.absoluteString, type: .image)
-                                                    ]))
+                                                    ]), selectedIndex: .constant(nil))
     }
 }
