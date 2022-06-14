@@ -23,7 +23,7 @@ class BadgesViewModel: ObservableObject {
         ref.child("badges").getData { error, snapshot in
             guard error == nil else {
                 print(error!.localizedDescription)
-                return;
+                return
             }
             guard let dict = snapshot?.value as? NSDictionary else { return }
             let values = dict.allValues.compactMap { value in

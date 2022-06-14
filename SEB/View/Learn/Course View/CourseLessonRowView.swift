@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CourseLessonRowView: View {
     
+    var course: Course
+    
     var lessons: [CourseLesson]
     var lesson: CourseLesson
     var completedChapters: Int?
@@ -46,13 +48,13 @@ struct CourseLessonRowView: View {
                 .opacity(0.5)
         }
         .fullScreenCover(isPresented: $isLessonPresented) {
-            LessonView(courseLesson: lesson)
+            LessonView(course: course, courseLesson: lesson)
         }
     }
 }
 
 struct CourseLessonRowView_Previews: PreviewProvider {
     static var previews: some View {
-        CourseLessonRowView(lessons: [], lesson: Course.sample.lesson[0])
+        CourseLessonRowView(course: .sample, lessons: [], lesson: Course.sample.lesson[0])
     }
 }

@@ -12,6 +12,7 @@ struct LessonView: View {
     @State var currentUnit = 0
     @Environment(\.presentationMode) var presentationMode
     
+    var course: Course
     var courseLesson: CourseLesson
     
     var body: some View {
@@ -30,7 +31,7 @@ struct LessonView: View {
                 .padding(.horizontal, 21)
             
             if currentUnit == courseLesson.lessonUnit.count {
-                QuizView(questions: courseLesson.quiz)
+                QuizView(course: course, questions: courseLesson.quiz, lesson: courseLesson)
                     .padding(.horizontal, 21)
             } else {
                 UnitView(lesson: courseLesson.lessonUnit[currentUnit])
@@ -68,6 +69,7 @@ struct LessonView: View {
 
 struct LessonView_Previews: PreviewProvider {
     static var previews: some View {
-        LessonView(courseLesson: .init(title: "", description: "", lessonUnit: [.sample], quiz: [.sample]))
+        LessonView(course: .sample,
+                   courseLesson: .init(title: "", description: "", lessonUnit: [.sample], quiz: [.sample]))
     }
 }

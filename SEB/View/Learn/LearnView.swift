@@ -19,6 +19,7 @@ struct LearnView: View {
                 ExploreView(userViewModel: userViewModel)
             }
             .navigationTitle("Hi \(userViewModel.user?.name ?? "Guest")!")
+            .environmentObject(userViewModel)
         }
     }
 }

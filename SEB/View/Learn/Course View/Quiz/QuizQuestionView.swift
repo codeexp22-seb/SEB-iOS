@@ -12,6 +12,8 @@ struct QuizQuestionView: View {
     var questionIndex: Int
     var quizQuestion: QuizQuestion
     
+    @Binding var selectedIndex: Int?
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text("Question \(questionIndex + 1):")
@@ -19,9 +21,14 @@ struct QuizQuestionView: View {
             
             Text(quizQuestion.title)
                 .multilineTextAlignment(.leading)
-            
+                        
             ForEach(quizQuestion.options, id: \.text) { option in
-                QuizOptionRichText(unitRichText: option)
+                Button {
+                    selectedIndex = quizQuestion.options.firstIndex(of: option)
+                } label: {
+                    QuizOptionRichText(isSelected: selectedIndex == quizQuestion.options.firstIndex(of: option),
+                                       unitRichText: option)
+                }
             }
         }
     }
@@ -36,6 +43,6 @@ struct QuizQuestionView_Previews: PreviewProvider {
                                                         UnitRichText(text: "`Text(Potato)` a", type: .markdown),
                                                         UnitRichText(text: "aaaa", type: .plainText),
                                                         UnitRichText(text: URL.sampleImage.absoluteString, type: .image)
-                                                    ]))
+                                                    ]), selectedIndex: .constant(nil))
     }
 }

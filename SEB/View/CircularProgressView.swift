@@ -11,7 +11,7 @@ import SwiftUI
 struct CircularProgressView: View {
     
     var lineWidth = 15.0
-    
+    var accentColor: Color = .accentColor
     var progress: CGFloat
     
     var body: some View {
@@ -20,7 +20,7 @@ struct CircularProgressView: View {
                 .stroke(lineWidth: lineWidth)
                 .fixedSize(horizontal: false, vertical: false)
                 .opacity(0.3)
-                .foregroundColor(.accentColor)
+                .foregroundColor(accentColor)
             
             Circle()
                 .trim(from: 0, to: progress)
@@ -28,7 +28,7 @@ struct CircularProgressView: View {
                                      lineCap: .round,
                                      lineJoin: .round))
                 .fixedSize(horizontal: false, vertical: false)
-                .foregroundColor(.accentColor)
+                .foregroundColor(accentColor)
                 .rotationEffect(Angle(degrees: 270))
         }
         .padding(lineWidth / 2)
