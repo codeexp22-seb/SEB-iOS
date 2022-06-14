@@ -18,6 +18,16 @@ class QuizViewModel: ObservableObject {
         }
     }
     
+    var correctOptions: Int {
+        get {
+            questionAndAnswers.reduce(0) { partialResult, qna in
+                let questionScore = qna.question.correctOptionIndex == qna.answer ? 1 : 0
+                
+                return partialResult + questionScore
+            }
+        }
+    }
+    
     func index(of value: QuestionAndAnswers) -> Int? {
         return questionAndAnswers.firstIndex(of: value)!
     }
