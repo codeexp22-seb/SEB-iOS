@@ -31,7 +31,7 @@ struct QuizResultsView: View {
                 .frame(width: 200)
                 
                 Text("\(Int(round(quizViewModel.score * 100)))%")
-                    .font(.system(size: 24))
+                    .font(.system(size: 24, weight: .bold))
                     .foregroundColor(passed ? Color.accentColor : Color("Red"))
             }
         }
