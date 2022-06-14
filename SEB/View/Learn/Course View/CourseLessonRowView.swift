@@ -28,6 +28,7 @@ struct CourseLessonRowView: View {
                 VStack(alignment: .leading) {
                     Text(lesson.title)
                         .font(.system(size: 24, weight: .bold))
+                        .multilineTextAlignment(.leading)
                     Text(lesson.description)
                         .font(.system(size: 15, weight: .regular))
                         .multilineTextAlignment(.leading)
