@@ -11,10 +11,8 @@ import FirebaseDatabaseSwift
 
 extension UserViewModel {
     func mint(badge: Badge) throws {
-        guard let currentUser = auth.currentUser else { return }
-        
         let rtdb = Database.database().reference()
         
-        try rtdb.child("badges/\(currentUser.uid)").setValue(from: badge)
+        try rtdb.child("badges/\(badge.id)").setValue(from: badge)
     }
 }
