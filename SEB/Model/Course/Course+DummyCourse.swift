@@ -43,7 +43,7 @@ extension Course {
                 CourseLesson(title: "Re-assembly of a SAR-21", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
                 CourseLesson(title: "How to Handle Ammunition", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
                 CourseLesson(title: "Handling the SAR-21", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
-                CourseLesson(title: "Steadying Your Aim", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample])
+                CourseLesson(title: "Steadying Your Aim", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
                 CourseLesson(title: "Your First Gunshot", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
                 CourseLesson(title: "Target Practice", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
                 CourseLesson(title: "Maneuvering With The SAR-21", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
