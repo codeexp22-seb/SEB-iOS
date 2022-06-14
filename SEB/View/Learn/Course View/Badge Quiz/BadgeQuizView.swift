@@ -20,7 +20,6 @@ struct BadgeQuizView: View {
     
     var course: Course
     
-    
     var body: some View {
         VStack(alignment: .leading) {
             Button {
@@ -32,7 +31,9 @@ struct BadgeQuizView: View {
             }
             .padding(21)
             
-            BadgeQuizHeader(courseName: course.title, endDate: .now.addingTimeInterval(40), badgeIcon: course.badgeQuizImage)
+            BadgeQuizHeader(courseName: course.title,
+                            endDate: .now.addingTimeInterval(40),
+                            badgeIcon: course.badgeQuizImage)
             
             ScrollView {
                 ForEach($quizViewModel.questionAndAnswers) { $questionAndAnswer in

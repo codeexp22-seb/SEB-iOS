@@ -15,15 +15,13 @@ struct ContentView: View {
     @StateObject var userViewModel = UserViewModel()
     @StateObject var authenticationViewModel = AuthenticationViewModel()
     
-    @StateObject var badgesViewModel = BadgesViewModel()
-    
     var body: some View {
         TabView {
             LearnView(userViewModel: userViewModel)
                 .tabItem {
                     Label("Learn", systemImage: "graduationcap")
                 }
-            BadgesView(badges: badgesViewModel.badges)
+            BadgesView()
                 .tabItem {
                     Label("Badges", systemImage: "hexagon")
                 }
