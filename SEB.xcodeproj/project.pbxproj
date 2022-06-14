@@ -58,6 +58,7 @@
 		32DE62C628584B4900553FE1 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62C528584B4900553FE1 /* Badge.swift */; };
 		32DE62C928584C8700553FE1 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62C828584C8700553FE1 /* SignInView.swift */; };
 		32DE62CB28584D1000553FE1 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62CA28584D1000553FE1 /* AuthenticationViewModel.swift */; };
+		32DE62CD2858540800553FE1 /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62CC2858540800553FE1 /* Reward.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +107,7 @@
 		32DE62C528584B4900553FE1 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		32DE62C828584C8700553FE1 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		32DE62CA28584D1000553FE1 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		32DE62CC2858540800553FE1 /* Reward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reward.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				32D74D0D28562CFA00674AFE /* User.swift */,
+				32DE62CC2858540800553FE1 /* Reward.swift */,
 				32DE62B02857AFC700553FE1 /* Rings.swift */,
 			);
 			path = User;
@@ -463,6 +466,7 @@
 				328303492856501C00414E6E /* ExploreView.swift in Sources */,
 				328F795D28561B0D00E65FEB /* CircularProgressView.swift in Sources */,
 				32DE62CB28584D1000553FE1 /* AuthenticationViewModel.swift in Sources */,
+				32DE62CD2858540800553FE1 /* Reward.swift in Sources */,
 				328F794C2856142B00E65FEB /* SEBApp.swift in Sources */,
 				3283034428563CC900414E6E /* Course+Preview.swift in Sources */,
 				3238FD1A2857279C00550781 /* QuizQuestion+Sample.swift in Sources */,

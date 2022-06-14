@@ -8,6 +8,18 @@
 import Foundation
 
 struct User: Codable {
-    var userID: String // Firebase UID
-    var username: String
+    var name: String
+    
+    var rewards: [Reward]
+    
+    var rings: Rings
+    
+//    init(from decoder: Decoder) throws {
+//        let container = try decoder.container(keyedBy: CodingKeys.self)
+//        self.name = try container.decode(String.self, forKey: .name)
+//        self.rewards = try container.decode([Reward].self, forKey: .rewards)
+//        let rings = try container.decode([String: Double].self, forKey: .rings)
+//
+//        self.rings = Rings(skill: rings["skill"] ?? 0, fitness: rings["fitness"] ?? 0, nationalService: rings["ns"] ?? 0)
+//    }
 }
