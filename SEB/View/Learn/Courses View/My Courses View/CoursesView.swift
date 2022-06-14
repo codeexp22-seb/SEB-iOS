@@ -20,7 +20,7 @@ struct CoursesView: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack {
                     ForEach(userViewModel.userCourses) { course in
-                        CourseCardView(chaptersCompleted: 2,
+                        CourseCardView(chaptersCompleted: 1,
                                        course: course)
                             .frame(width: 300, height: 230)
                     }

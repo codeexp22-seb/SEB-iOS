@@ -25,7 +25,7 @@ struct ContentView: View {
                 .tabItem {
                     Label("Badges", systemImage: "hexagon")
                 }
-            ProfileView()
+            ProfileView(userViewModel: userViewModel)
                 .tabItem {
                     Label("Profile", systemImage: "person")
                 }
