@@ -9,6 +9,8 @@ import SwiftUI
 
 struct QuizOptionRichText: View {
     
+    var isSelected: Bool
+    
     var unitRichText: UnitRichText
     
     var body: some View {
@@ -58,13 +60,15 @@ struct QuizOptionRichText: View {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding()
-        .background(Color(.systemGray6))
+        .foregroundColor(isSelected ? .white : .black)
+        .background(isSelected ? Color.accentColor : Color(.systemGray6))
         .cornerRadius(8)
+        .foregroundColor(.black)
     }
 }
 
 struct QuizOptionRichText_Previews: PreviewProvider {
     static var previews: some View {
-        QuizOptionRichText(unitRichText: .init(text: "hello", type: .code))
+        QuizOptionRichText(isSelected: false, unitRichText: .init(text: "hello", type: .code))
     }
 }
