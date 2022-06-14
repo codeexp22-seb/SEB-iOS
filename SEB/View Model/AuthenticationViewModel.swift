@@ -12,7 +12,7 @@ import FirebaseFirestoreSwift
 
 class AuthenticationViewModel: ObservableObject {
     
-    @Published var isNotAuthenticated = true
+    @Published var isNotAuthenticated = false
     @Published var authenticationErrorMessage = ""
     @Published var authenticationErrorPresented = false
     

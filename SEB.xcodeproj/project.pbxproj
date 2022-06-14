@@ -59,6 +59,7 @@
 		32DE62C928584C8700553FE1 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62C828584C8700553FE1 /* SignInView.swift */; };
 		32DE62CB28584D1000553FE1 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62CA28584D1000553FE1 /* AuthenticationViewModel.swift */; };
 		32DE62CD2858540800553FE1 /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62CC2858540800553FE1 /* Reward.swift */; };
+		32DE62CF28586EDA00553FE1 /* UserViewModel+BadgeMint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62CE28586EDA00553FE1 /* UserViewModel+BadgeMint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,6 +109,7 @@
 		32DE62C828584C8700553FE1 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		32DE62CA28584D1000553FE1 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		32DE62CC2858540800553FE1 /* Reward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reward.swift; sourceTree = "<group>"; };
+		32DE62CE28586EDA00553FE1 /* UserViewModel+BadgeMint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserViewModel+BadgeMint.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,7 +257,7 @@
 		328F795B28561AA300E65FEB /* View Model */ = {
 			isa = PBXGroup;
 			children = (
-				32D74D0928562CAB00674AFE /* UserViewModel.swift */,
+				32DE62D02858702300553FE1 /* User */,
 				32DE62CA28584D1000553FE1 /* AuthenticationViewModel.swift */,
 			);
 			path = "View Model";
@@ -338,6 +340,15 @@
 				32DE62C828584C8700553FE1 /* SignInView.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		32DE62D02858702300553FE1 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				32D74D0928562CAB00674AFE /* UserViewModel.swift */,
+				32DE62CE28586EDA00553FE1 /* UserViewModel+BadgeMint.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -461,6 +472,7 @@
 				32830346285649E200414E6E /* CourseProgressView.swift in Sources */,
 				328A3BFE2856FBF600FA0F6D /* CGFloat+SafeAreaInsets.swift in Sources */,
 				32DE62C928584C8700553FE1 /* SignInView.swift in Sources */,
+				32DE62CF28586EDA00553FE1 /* UserViewModel+BadgeMint.swift in Sources */,
 				3238FD152857110F00550781 /* CourseLessonRowView.swift in Sources */,
 				328A3C022856FFF000FA0F6D /* CourseHeaderView.swift in Sources */,
 				328303492856501C00414E6E /* ExploreView.swift in Sources */,
