@@ -18,7 +18,7 @@ struct LearnView: View {
                 CoursesView(userViewModel: userViewModel)
                 ExploreView(userViewModel: userViewModel)
             }
-            .navigationTitle("Hi Rui Yang!")
+            .navigationTitle("Hi \(userViewModel.user?.name ?? "Guest")!")
         }
     }
 }

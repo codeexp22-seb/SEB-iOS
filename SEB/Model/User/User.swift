@@ -7,7 +7,12 @@
 
 import Foundation
 
-struct User {
-    var userID: String // Firebase UID
+struct User: Codable {
+    var name: String
     
+    var rewards: [Reward]
+    
+    var rings: Rings
+    
+    var badges: [String] = []
 }

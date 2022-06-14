@@ -9,6 +9,6 @@ identifier_name:
     - x
     - y
     - id
-
+    - db
 excluded:
   - SEB/Preview Content/
