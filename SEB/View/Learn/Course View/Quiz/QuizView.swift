@@ -29,6 +29,7 @@ struct QuizView: View {
                 } label: {
                     Text("Submit")
                         .foregroundColor(.white)
+                        .bold()
                         .padding()
                         .frame(maxWidth: .infinity)
                         .background(Color.accentColor)
