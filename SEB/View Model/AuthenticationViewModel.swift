@@ -7,6 +7,8 @@
 
 import Foundation
 import FirebaseAuth
+import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 class AuthenticationViewModel: ObservableObject {
     
@@ -14,30 +16,46 @@ class AuthenticationViewModel: ObservableObject {
     @Published var authenticationErrorMessage = ""
     @Published var authenticationErrorPresented = false
     
-    let auth = Auth.auth()
-    
-    init() {
-        auth.addStateDidChangeListener { _, user in
-            self.isNotAuthenticated = user == nil
+    var auth: Auth! {
+        didSet {
+            auth.addStateDidChangeListener { _, user in
+                self.isNotAuthenticated = user == nil
+            }
+            
+            isNotAuthenticated = auth.currentUser == nil
         }
-        
-        isNotAuthenticated = auth.currentUser == nil
     }
     
-    func signIn(with email: String, password: String) {
+    init() {
+        
+    }
+    
+    func signIn(with email: String, password: String, onCompletion: @escaping (() -> ())) {
         Auth.auth().signIn(withEmail: email, password: password) { [self] _, error in
             if let error = error {
                 authenticationErrorMessage = error.localizedDescription
                 authenticationErrorPresented = true
+            } else {
+                onCompletion()
             }
         }
     }
     
-    func signUp(with email: String, password: String) {
-        Auth.auth().createUser(withEmail: email, password: password) { [self] _, error in
+    func signUp(with email: String, password: String, name: String, onCompletion: @escaping (() -> ())) {
+        Auth.auth().createUser(withEmail: email, password: password) { [self] result, error in
             if let error = error {
                 authenticationErrorMessage = error.localizedDescription
                 authenticationErrorPresented = true
+            } else if let result = result {
+                let user = User(name: name,
+                                rewards: [],
+                                rings: .init(skill: 0, fitness: 0, nationalService: 0))
+                
+                let db = Firestore.firestore()
+                
+                try? db.collection("users").document(result.user.uid).setData(from: user)
+                
+                onCompletion()
             }
         }
     }

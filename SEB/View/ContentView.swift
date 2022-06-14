@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct ContentView: View {
+    
+    let auth = Auth.auth()
     
     @StateObject var userViewModel = UserViewModel()
     @StateObject var authenticationViewModel = AuthenticationViewModel()
@@ -27,8 +30,16 @@ struct ContentView: View {
                     Label("Profile", systemImage: "person")
                 }
         }
-        .sheet(isPresented: $authenticationViewModel.isNotAuthenticated) {
-            SignInView(authenticationViewModel: authenticationViewModel)
+        .fullScreenCover(isPresented: $authenticationViewModel.isNotAuthenticated) {
+            SignInView(authenticationViewModel: authenticationViewModel) { name in
+                Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { _ in
+                    userViewModel.loadUserDataFromFirestore(username: name)
+                }
+            }
+        }
+        .onAppear {
+            userViewModel.auth = auth
+            authenticationViewModel.auth = auth
         }
     }
 }

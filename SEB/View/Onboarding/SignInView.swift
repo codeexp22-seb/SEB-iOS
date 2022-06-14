@@ -12,10 +12,17 @@ struct SignInView: View {
     @State var email = ""
     @State var password = ""
     
+    @State var name = ""
+    
     @State var rotation = Angle.zero
     @State var scale = 1.0
     
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
+    
+    var onDismiss: ((String) -> ())
+    
+    @State var isSignIn = true
+    @State var presentAdditionalOptions = false
     
     var body: some View {
         VStack {
@@ -37,47 +44,57 @@ struct SignInView: View {
                     }
             }
             
+            Picker("", selection: $isSignIn) {
+                Text("Sign In")
+                    .tag(true)
+                Text("Sign Up")
+                    .tag(false)
+            }
+            .pickerStyle(.segmented)
+            .onChange(of: isSignIn) { newValue in
+                withAnimation {
+                    presentAdditionalOptions = !newValue
+                }
+            }
+            
+            if presentAdditionalOptions {
+                TextField("Name", text: $name)
+                    .padding(.bottom)
+            }
+            
             TextField("Email", text: $email)
                 .keyboardType(.emailAddress)
                 .textInputAutocapitalization(.never)
                 .padding(.bottom)
                 .autocorrectionDisabled()
-
             
             SecureField("Password", text: $password)
+                .padding(.bottom)
             
-            HStack {
-                Button {
+            Button {
+                if isSignIn {
                     authenticationViewModel.signIn(with: email,
-                                                   password: password)
-                } label: {
-                    HStack {
-                        Spacer()
-                        Text("Sign In")
-                            .foregroundColor(.white)
-                        Spacer()
+                                                   password: password) {
+                        onDismiss(name)
                     }
-                    .padding()
-                    .background(Color.accentColor)
-                    .cornerRadius(8)
-                }
-                
-                Button {
+                } else {
                     authenticationViewModel.signUp(with: email,
-                                                   password: password)
-                } label: {
-                    HStack {
-                        Spacer()
-                        Text("Sign Up")
-                            .foregroundColor(.white)
-                        Spacer()
+                                                   password: password,
+                                                   name: name) {
+                        onDismiss(name)
                     }
-                    .padding()
-                    .background(Color.accentColor)
-                    .cornerRadius(8)
                 }
+            } label: {
+                HStack {
+                    Spacer()
+                    Text("Done")
+                        .foregroundColor(.white)
+                    Spacer()
+                }
+                .padding()
+                .background(Color.accentColor)
+                .cornerRadius(8)
             }
-            .padding(.top)
             
             Spacer()
         }
@@ -87,6 +104,8 @@ struct SignInView: View {
 
 struct SignInView_Previews: PreviewProvider {
     static var previews: some View {
-        SignInView(authenticationViewModel: .init())
+        SignInView(authenticationViewModel: .init()) { _ in
+            
+        }
     }
 }

@@ -14,12 +14,5 @@ struct User: Codable {
     
     var rings: Rings
     
-//    init(from decoder: Decoder) throws {
-//        let container = try decoder.container(keyedBy: CodingKeys.self)
-//        self.name = try container.decode(String.self, forKey: .name)
-//        self.rewards = try container.decode([Reward].self, forKey: .rewards)
-//        let rings = try container.decode([String: Double].self, forKey: .rings)
-//
-//        self.rings = Rings(skill: rings["skill"] ?? 0, fitness: rings["fitness"] ?? 0, nationalService: rings["ns"] ?? 0)
-//    }
+    var badges: [String] = []
 }

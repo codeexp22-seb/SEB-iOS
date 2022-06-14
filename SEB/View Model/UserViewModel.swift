@@ -34,24 +34,39 @@ class UserViewModel: ObservableObject {
         }
     }
     
-    init() {
-        db = Firestore.firestore()
-        loadUserDataFromFirestore()
+    var auth: Auth! {
+        didSet {
+            loadUserDataFromFirestore()
+        }
     }
     
-    func loadUserDataFromFirestore() {
-        if let user = Auth.auth().currentUser {
-            print(user.uid)
-            db.collection("users").document(user.uid).getDocument { snapshot, error in
-                do {
-                    if let user = try snapshot?.data(as: User.self) {
-                        withAnimation {
-                            self.user = user
+    init() {
+        db = Firestore.firestore()
+    }
+    
+    func loadUserDataFromFirestore(username: String? = nil) {
+        if let user = auth.currentUser {
+            db.collection("users").document(user.uid).getDocument { [self] snapshot, error in
+                if let error = error {
+                    print(error)
+                } else {
+                    do {
+                        if let user = try snapshot?.data(as: User.self) {
+                            withAnimation {
+                                self.user = user
+                            }
                         }
+                    } catch {
+                        print(error.localizedDescription)
                         
+                        if let username = username, !username.isEmpty {
+                            self.user = User(name: username,
+                                             rewards: [],
+                                             rings: .init(skill: 0, fitness: 0, nationalService: 0))
+                            
+                            try? db.collection("users").document(user.uid).setData(from: self.user)
+                        }
                     }
-                } catch {
-                    print(error.localizedDescription)
                 }
             }
         }
