@@ -30,7 +30,7 @@ struct LessonView: View {
                 .padding(.horizontal, 21)
             
             if currentUnit == courseLesson.lessonUnit.count {
-                QuizView(questions: courseLesson.quiz)
+                QuizView(questions: courseLesson.quiz, lesson: courseLesson)
                     .padding(.horizontal, 21)
             } else {
                 UnitView(lesson: courseLesson.lessonUnit[currentUnit])
