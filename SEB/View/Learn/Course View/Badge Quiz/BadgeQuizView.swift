@@ -6,13 +6,20 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct BadgeQuizView: View {
     
     @Environment(\.presentationMode) var presentationMode
     @StateObject var quizViewModel = QuizViewModel()
     
+    @EnvironmentObject var userViewModel: UserViewModel
+    
+    @State var isResultsPresented = false
+    @State var badge: Badge?
+    
     var course: Course
+    
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -40,6 +47,34 @@ struct BadgeQuizView: View {
             .onAppear {
                 quizViewModel.questions = course.badgeQuiz
             }
+            
+            Button {
+                badge = Badge(id: .init(),
+                              badgeName: course.title,
+                              badgeDescription: course.description,
+                              badgeImage: course.badgeQuizImage,
+                              date: .now,
+                              awardedTo: userViewModel.user!.name,
+                              userID: userViewModel.auth.currentUser!.uid)
+                
+                isResultsPresented = true
+                
+                try? userViewModel.mint(badge: badge!)
+                
+            } label: {
+                Text("Submit")
+                    .foregroundColor(.white)
+                    .bold()
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.accentColor)
+                    .cornerRadius(8)
+            }
+            .padding(.top)
+            .fullScreenCover(item: $badge) { badge in
+                BadgeResultSuccessView(badge: badge)
+            }
+            .padding(21)
         }
     }
 }

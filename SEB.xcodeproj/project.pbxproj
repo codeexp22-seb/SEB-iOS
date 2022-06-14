@@ -69,6 +69,7 @@
 		32DE62E12858B1DA00553FE1 /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62E02858B1DA00553FE1 /* QuizViewModel.swift */; };
 		32DE62E42858EFA600553FE1 /* BadgeQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62E32858EFA600553FE1 /* BadgeQuizView.swift */; };
 		32DE62E62858F43F00553FE1 /* BadgeQuizHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62E52858F43F00553FE1 /* BadgeQuizHeader.swift */; };
+		32DE62E82858FDB500553FE1 /* BadgeResultSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62E72858FDB500553FE1 /* BadgeResultSuccessView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -128,6 +129,7 @@
 		32DE62E02858B1DA00553FE1 /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
 		32DE62E32858EFA600553FE1 /* BadgeQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeQuizView.swift; sourceTree = "<group>"; };
 		32DE62E52858F43F00553FE1 /* BadgeQuizHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeQuizHeader.swift; sourceTree = "<group>"; };
+		32DE62E72858FDB500553FE1 /* BadgeResultSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeResultSuccessView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -389,6 +391,7 @@
 			isa = PBXGroup;
 			children = (
 				32DE62E32858EFA600553FE1 /* BadgeQuizView.swift */,
+				32DE62E72858FDB500553FE1 /* BadgeResultSuccessView.swift */,
 				32DE62E52858F43F00553FE1 /* BadgeQuizHeader.swift */,
 			);
 			path = "Badge Quiz";
@@ -504,6 +507,7 @@
 				328A3C0728570C8600FA0F6D /* LessonUnit+Preview.swift in Sources */,
 				32DE62B12857AFC700553FE1 /* Rings.swift in Sources */,
 				32DE62E12858B1DA00553FE1 /* QuizViewModel.swift in Sources */,
+				32DE62E82858FDB500553FE1 /* BadgeResultSuccessView.swift in Sources */,
 				32D74D1028562DE700674AFE /* QuizQuestion.swift in Sources */,
 				32D74D182856395100674AFE /* CourseCardView.swift in Sources */,
 				32DE62D42858739700553FE1 /* Badge+Preview.swift in Sources */,

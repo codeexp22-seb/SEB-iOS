@@ -12,6 +12,8 @@ struct CourseView: View {
     var completedChapters: Int?
     var course: Course
     
+    @State var showBadgeQuiz = false
+    
     var body: some View {
         VStack {
             CourseHeaderView(course: course, completedChapters: completedChapters)
@@ -25,31 +27,39 @@ struct CourseView: View {
                                             completedChapters: completedChapters)
                     }
                     
-                    VStack(alignment: .leading) {
-                        HStack {
-                            AsyncImage(url: course.badgeQuizImage) { image in
-                                image
-                                    .resizable()
-                                    .scaledToFit()
-                            } placeholder: {
-                                Image(systemName: "hexagon")
-                                    .resizable()
-                                    .scaledToFit()
+                    Button {
+                        showBadgeQuiz = true
+                    } label: {
+                        VStack(alignment: .leading) {
+                            HStack {
+                                AsyncImage(url: course.badgeQuizImage) { image in
+                                    image
+                                        .resizable()
+                                        .scaledToFit()
+                                } placeholder: {
+                                    Image(systemName: "hexagon")
+                                        .resizable()
+                                        .scaledToFit()
+                                }
+                                .frame(height: 32)
+                                
+                                Text("Quiz")
+                                    .font(.system(size: 24, weight: .bold))
                             }
-                            .frame(height: 32)
-                            
-                            Text("Quiz")
-                                .font(.system(size: 24, weight: .bold))
+                            Text("Take a skills assessment after you’ve completed the course!")
+                                .font(.system(size: 15, weight: .regular))
+                                .multilineTextAlignment(.leading)
                         }
-                        Text("Take a skills assessment after you’ve completed the course!")
-                            .font(.system(size: 15, weight: .regular))
-                            .multilineTextAlignment(.leading)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding()
+                        .background(Color(.systemGray6))
+                        .cornerRadius(8)
+                        .padding(.horizontal)
                     }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding()
-                    .background(Color(.systemGray6))
-                    .cornerRadius(8)
-                    .padding(.horizontal)
+                    .foregroundColor(.black)
+                    .fullScreenCover(isPresented: $showBadgeQuiz) {
+                        BadgeQuizView(course: course)
+                    }
                 }
             }
         }
