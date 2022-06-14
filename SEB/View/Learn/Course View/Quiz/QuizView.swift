@@ -11,7 +11,11 @@ struct QuizView: View {
     
     var questions: [QuizQuestion]
     
-    @State var questionAndAnswers: [QuestionAndAnswers] = []
+    @StateObject var quizViewModel = QuizViewModel()
+    
+    @Environment(\.presentationMode) var presentationMode
+    
+    @State var isResultsPresented = false
     
     var body: some View {
         ScrollView {
@@ -19,8 +23,9 @@ struct QuizView: View {
                 Text("Check your understanding")
                     .font(.system(size: 20, weight: .bold))
                 
-                ForEach($questionAndAnswers) { $questionAndAnswer in
-                    let questionIndex = questionAndAnswers.firstIndex(of: questionAndAnswer)!
+                ForEach($quizViewModel.questionAndAnswers) { $questionAndAnswer in
+                    
+                    let questionIndex = quizViewModel.index(of: questionAndAnswer)!
                     
                     QuizQuestionView(questionIndex: questionIndex,
                                      quizQuestion: questionAndAnswer.question,
@@ -29,7 +34,7 @@ struct QuizView: View {
                 }
                 
                 Button {
-                    
+                    isResultsPresented = true
                 } label: {
                     Text("Submit")
                         .foregroundColor(.white)
@@ -40,13 +45,15 @@ struct QuizView: View {
                         .cornerRadius(8)
                 }
                 .padding(.top)
-
+                .fullScreenCover(isPresented: $isResultsPresented) {
+                    QuizResultsView {
+                        presentationMode.wrappedValue.dismiss()
+                    }
+                }
             }
         }
         .onAppear {
-            questionAndAnswers = questions.map {
-                QuestionAndAnswers(question: $0)
-            }
+            quizViewModel.questions = questions
         }
     }
 }
