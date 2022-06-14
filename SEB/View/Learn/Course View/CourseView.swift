@@ -19,7 +19,8 @@ struct CourseView: View {
             ScrollView {
                 VStack(spacing: 0) {
                     ForEach(course.lesson) { lesson in
-                        CourseLessonRowView(lessons: course.lesson,
+                        CourseLessonRowView(course: course,
+                                            lessons: course.lesson,
                                             lesson: lesson,
                                             completedChapters: completedChapters)
                     }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct QuizView: View {
     
+    var course: Course
     var questions: [QuizQuestion]
     var lesson: CourseLesson
     
@@ -47,7 +48,7 @@ struct QuizView: View {
                 }
                 .padding(.top)
                 .fullScreenCover(isPresented: $isResultsPresented) {
-                    QuizResultsView(quizViewModel: quizViewModel, lesson: lesson) {
+                    QuizResultsView(quizViewModel: quizViewModel, course: course, lesson: lesson) {
                         presentationMode.wrappedValue.dismiss()
                     }
                 }
@@ -61,6 +62,6 @@ struct QuizView: View {
 
 struct QuizView_Previews: PreviewProvider {
     static var previews: some View {
-        QuizView(questions: [.sample, .sample], lesson: Course.sample.lesson[0])
+        QuizView(course: .sample, questions: [.sample, .sample], lesson: Course.sample.lesson[0])
     }
 }

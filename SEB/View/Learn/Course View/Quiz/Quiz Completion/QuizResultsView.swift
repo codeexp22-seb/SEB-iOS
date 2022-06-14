@@ -12,10 +12,15 @@ struct QuizResultsView: View {
     @ObservedObject var quizViewModel: QuizViewModel
     @EnvironmentObject var userViewModel: UserViewModel
     
+    var course: Course
     var lesson: CourseLesson
     var onDismiss: (() -> Void)
     
     @Environment(\.presentationMode) var presentationMode
+    
+    @State var skillAdded = false
+    @State var fitnessAdded = false
+    @State var nsAdded = false
     
     var body: some View {
         let passed = quizViewModel.score >= 0.5
@@ -54,6 +59,58 @@ struct QuizResultsView: View {
                         
                         Spacer()
                     }
+                    
+                    if passed {
+                        VStack {
+                            Text("Your Rings")
+                                .font(.system(size: 24, weight: .bold))
+                            HStack(spacing: 32) {
+                                ForEach(course.categories, id: \.self) { category in
+                                    switch category {
+                                    case .skill:
+                                        ProgressRingView(title: "Skill",
+                                                         systemName: "text.book.closed",
+                                                         progress: userViewModel.rings.skill)
+                                        .onAppear {
+                                            if !skillAdded {
+                                                withAnimation {
+                                                    userViewModel.rings.skill += quizViewModel.score / 4
+                                                }
+                                                skillAdded = true
+                                            }
+                                        }
+                                    case .fitness:
+                                        ProgressRingView(title: "Fitness",
+                                                         systemName: "figure.walk",
+                                                         progress: userViewModel.rings.fitness)
+                                        .onAppear {
+                                            if !fitnessAdded {
+                                                withAnimation {
+                                                    userViewModel.rings.fitness += quizViewModel.score / 4
+                                                }
+                                                fitnessAdded = true
+                                            }
+                                        }
+                                    case .nationalService:
+                                        ProgressRingView(title: "NS",
+                                                         systemName: "shield",
+                                                         progress: userViewModel.rings.nationalService)
+                                        .onAppear {
+                                            if !nsAdded {
+                                                withAnimation {
+                                                    userViewModel.rings.nationalService += quizViewModel.score / 4
+                                                }
+                                                nsAdded = true
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            
+                            Spacer()
+
+                        }
+                    }
                 }
                 .tabViewStyle(.page(indexDisplayMode: .always))
                 .onAppear {
@@ -71,6 +128,13 @@ struct QuizResultsView: View {
                         .background(passed ? .accentColor : Color("Red"))
                         .cornerRadius(8)
                 }
+                .disabled(!course.categories.allSatisfy { cat in
+                    switch cat {
+                    case .nationalService: return nsAdded
+                    case .skill: return skillAdded
+                    case .fitness: return fitnessAdded
+                    }
+                } && passed)
                 .padding()
             }
         }
@@ -79,7 +143,7 @@ struct QuizResultsView: View {
 
 struct QuizResultsView_Previews: PreviewProvider {
     static var previews: some View {
-        QuizResultsView(quizViewModel: .init(), lesson: Course.sample.lesson[0]) {
+        QuizResultsView(quizViewModel: .init(), course: .sample, lesson: Course.sample.lesson[0]) {
         }
     }
 }
