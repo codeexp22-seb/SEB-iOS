@@ -10,7 +10,7 @@ import Foundation
 struct User: Codable {
     var name: String
     
-    var rewards: [Reward]
+    var credits: Credit
     
     var rings: Rings
     

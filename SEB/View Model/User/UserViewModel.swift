@@ -61,7 +61,7 @@ class UserViewModel: ObservableObject {
                         
                         if let username = username, !username.isEmpty {
                             self.user = User(name: username,
-                                             rewards: [],
+                                             credits: Credit(remaining: 0, total: 0),
                                              rings: .init(skill: 0, fitness: 0, nationalService: 0))
                             
                             try? db.collection("users").document(user.uid).setData(from: self.user)

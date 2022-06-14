@@ -8,13 +8,26 @@
 import SwiftUI
 
 struct BadgesView: View {
+    
+    var badges: [Badge]
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            ScrollView {
+                LazyVGrid(columns: [.init(.adaptive(minimum: 96), spacing: 32)]) {
+                    ForEach(badges) { badge in
+                        BadgeView(badge: badge)
+                    }
+                }
+                .padding(21)
+            }
+            .navigationTitle("Badges")
+        }
     }
 }
 
 struct BadgesView_Previews: PreviewProvider {
     static var previews: some View {
-        BadgesView()
+        BadgesView(badges: [.sample])
     }
 }

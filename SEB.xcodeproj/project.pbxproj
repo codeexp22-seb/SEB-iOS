@@ -58,8 +58,12 @@
 		32DE62C628584B4900553FE1 /* Badge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62C528584B4900553FE1 /* Badge.swift */; };
 		32DE62C928584C8700553FE1 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62C828584C8700553FE1 /* SignInView.swift */; };
 		32DE62CB28584D1000553FE1 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62CA28584D1000553FE1 /* AuthenticationViewModel.swift */; };
-		32DE62CD2858540800553FE1 /* Reward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62CC2858540800553FE1 /* Reward.swift */; };
 		32DE62CF28586EDA00553FE1 /* UserViewModel+BadgeMint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62CE28586EDA00553FE1 /* UserViewModel+BadgeMint.swift */; };
+		32DE62D22858737F00553FE1 /* BadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62D12858737F00553FE1 /* BadgeView.swift */; };
+		32DE62D42858739700553FE1 /* Badge+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62D32858739700553FE1 /* Badge+Preview.swift */; };
+		32DE62D628587E1E00553FE1 /* BadgeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62D528587E1E00553FE1 /* BadgeDetailView.swift */; };
+		32DE62D82858887700553FE1 /* BadgesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62D72858887700553FE1 /* BadgesViewModel.swift */; };
+		32DE62DA28588E1F00553FE1 /* Credit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32DE62D928588E1F00553FE1 /* Credit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -108,8 +112,12 @@
 		32DE62C528584B4900553FE1 /* Badge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badge.swift; sourceTree = "<group>"; };
 		32DE62C828584C8700553FE1 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		32DE62CA28584D1000553FE1 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
-		32DE62CC2858540800553FE1 /* Reward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reward.swift; sourceTree = "<group>"; };
 		32DE62CE28586EDA00553FE1 /* UserViewModel+BadgeMint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserViewModel+BadgeMint.swift"; sourceTree = "<group>"; };
+		32DE62D12858737F00553FE1 /* BadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeView.swift; sourceTree = "<group>"; };
+		32DE62D32858739700553FE1 /* Badge+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Badge+Preview.swift"; sourceTree = "<group>"; };
+		32DE62D528587E1E00553FE1 /* BadgeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeDetailView.swift; sourceTree = "<group>"; };
+		32DE62D72858887700553FE1 /* BadgesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesViewModel.swift; sourceTree = "<group>"; };
+		32DE62D928588E1F00553FE1 /* Credit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +233,7 @@
 				328F79522856142D00E65FEB /* Preview Assets.xcassets */,
 				3283034328563CC900414E6E /* Course+Preview.swift */,
 				328A3C0628570C8600FA0F6D /* LessonUnit+Preview.swift */,
+				32DE62D32858739700553FE1 /* Badge+Preview.swift */,
 				3238FD192857279C00550781 /* QuizQuestion+Sample.swift */,
 				328A3BFF2856FD0F00FA0F6D /* URL+Preview.swift */,
 			);
@@ -259,6 +268,7 @@
 			children = (
 				32DE62D02858702300553FE1 /* User */,
 				32DE62CA28584D1000553FE1 /* AuthenticationViewModel.swift */,
+				32DE62D72858887700553FE1 /* BadgesViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -279,6 +289,8 @@
 			isa = PBXGroup;
 			children = (
 				328F796028561B5A00E65FEB /* BadgesView.swift */,
+				32DE62D12858737F00553FE1 /* BadgeView.swift */,
+				32DE62D528587E1E00553FE1 /* BadgeDetailView.swift */,
 			);
 			path = Badges;
 			sourceTree = "<group>";
@@ -310,7 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				32D74D0D28562CFA00674AFE /* User.swift */,
-				32DE62CC2858540800553FE1 /* Reward.swift */,
+				32DE62D928588E1F00553FE1 /* Credit.swift */,
 				32DE62B02857AFC700553FE1 /* Rings.swift */,
 			);
 			path = User;
@@ -457,10 +469,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				32DE62D22858737F00553FE1 /* BadgeView.swift in Sources */,
 				328A3C0728570C8600FA0F6D /* LessonUnit+Preview.swift in Sources */,
 				32DE62B12857AFC700553FE1 /* Rings.swift in Sources */,
 				32D74D1028562DE700674AFE /* QuizQuestion.swift in Sources */,
 				32D74D182856395100674AFE /* CourseCardView.swift in Sources */,
+				32DE62D42858739700553FE1 /* Badge+Preview.swift in Sources */,
 				328A3BFB2856667C00FA0F6D /* CourseBannerView.swift in Sources */,
 				32D74D03285627C400674AFE /* UnitRichText.swift in Sources */,
 				328A3C0928570DB500FA0F6D /* LessonView.swift in Sources */,
@@ -473,12 +487,13 @@
 				328A3BFE2856FBF600FA0F6D /* CGFloat+SafeAreaInsets.swift in Sources */,
 				32DE62C928584C8700553FE1 /* SignInView.swift in Sources */,
 				32DE62CF28586EDA00553FE1 /* UserViewModel+BadgeMint.swift in Sources */,
+				32DE62DA28588E1F00553FE1 /* Credit.swift in Sources */,
 				3238FD152857110F00550781 /* CourseLessonRowView.swift in Sources */,
+				32DE62D628587E1E00553FE1 /* BadgeDetailView.swift in Sources */,
 				328A3C022856FFF000FA0F6D /* CourseHeaderView.swift in Sources */,
 				328303492856501C00414E6E /* ExploreView.swift in Sources */,
 				328F795D28561B0D00E65FEB /* CircularProgressView.swift in Sources */,
 				32DE62CB28584D1000553FE1 /* AuthenticationViewModel.swift in Sources */,
-				32DE62CD2858540800553FE1 /* Reward.swift in Sources */,
 				328F794C2856142B00E65FEB /* SEBApp.swift in Sources */,
 				3283034428563CC900414E6E /* Course+Preview.swift in Sources */,
 				3238FD1A2857279C00550781 /* QuizQuestion+Sample.swift in Sources */,
@@ -494,6 +509,7 @@
 				328F796328561B6100E65FEB /* ProfileView.swift in Sources */,
 				3238FD1E28573D4C00550781 /* QuizView.swift in Sources */,
 				32D74D142856390600674AFE /* CoursesView.swift in Sources */,
+				32DE62D82858887700553FE1 /* BadgesViewModel.swift in Sources */,
 				328F796828561C9F00E65FEB /* ProgressRingsView.swift in Sources */,
 				3238FD18285726CD00550781 /* QuizQuestionView.swift in Sources */,
 				328F795F28561B5100E65FEB /* LearnView.swift in Sources */,
