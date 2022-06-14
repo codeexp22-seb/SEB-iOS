@@ -17,7 +17,7 @@ class AuthenticationViewModel: ObservableObject {
     let auth = Auth.auth()
     
     init() {
-        auth.addStateDidChangeListener { auth, user in
+        auth.addStateDidChangeListener { _, user in
             self.isNotAuthenticated = user == nil
         }
         
@@ -25,7 +25,7 @@ class AuthenticationViewModel: ObservableObject {
     }
     
     func signIn(with email: String, password: String) {
-        Auth.auth().signIn(withEmail: email, password: password) { [self] result, error in
+        Auth.auth().signIn(withEmail: email, password: password) { [self] _, error in
             if let error = error {
                 authenticationErrorMessage = error.localizedDescription
                 authenticationErrorPresented = true
@@ -34,7 +34,7 @@ class AuthenticationViewModel: ObservableObject {
     }
     
     func signUp(with email: String, password: String) {
-        Auth.auth().createUser(withEmail: email, password: password) { [self] result, error in
+        Auth.auth().createUser(withEmail: email, password: password) { [self] _, error in
             if let error = error {
                 authenticationErrorMessage = error.localizedDescription
                 authenticationErrorPresented = true
