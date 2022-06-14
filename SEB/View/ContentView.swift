@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @StateObject var userViewModel = UserViewModel()
+    @StateObject var authenticationViewModel = AuthenticationViewModel()
     
     var body: some View {
         TabView {
@@ -25,6 +26,9 @@ struct ContentView: View {
                 .tabItem {
                     Label("Profile", systemImage: "person")
                 }
+        }
+        .sheet(isPresented: $authenticationViewModel.isNotAuthenticated) {
+            SignInView(authenticationViewModel: authenticationViewModel)
         }
     }
 }
