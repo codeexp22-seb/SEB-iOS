@@ -19,7 +19,7 @@ struct SignInView: View {
     
     @ObservedObject var authenticationViewModel: AuthenticationViewModel
     
-    var onDismiss: ((String) -> ())
+    var onDismiss: ((String) -> Void)
     
     @State var isSignIn = true
     @State var presentAdditionalOptions = false

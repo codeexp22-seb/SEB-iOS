@@ -30,7 +30,7 @@ class AuthenticationViewModel: ObservableObject {
         
     }
     
-    func signIn(with email: String, password: String, onCompletion: @escaping (() -> ())) {
+    func signIn(with email: String, password: String, onCompletion: @escaping (() -> Void)) {
         Auth.auth().signIn(withEmail: email, password: password) { [self] _, error in
             if let error = error {
                 authenticationErrorMessage = error.localizedDescription
@@ -41,7 +41,7 @@ class AuthenticationViewModel: ObservableObject {
         }
     }
     
-    func signUp(with email: String, password: String, name: String, onCompletion: @escaping (() -> ())) {
+    func signUp(with email: String, password: String, name: String, onCompletion: @escaping (() -> Void)) {
         Auth.auth().createUser(withEmail: email, password: password) { [self] result, error in
             if let error = error {
                 authenticationErrorMessage = error.localizedDescription
