@@ -17,14 +17,14 @@ extension Course {
                categories: [.skill, .nationalService],
                courseBannerURL: .sampleImage,
                lesson: [
-                CourseLesson(title: "Producing a Namecard Application", description: "a", lessonUnit:[.sample, .sample, .sample], quiz:[.sample, .sample, .sample]),
-                CourseLesson(title: "Intro to Swift 1", description: "a", lessonUnit:[.sample, .sample, .sample], quiz:[.sample, .sample, .sample]),
-                CourseLesson(title: "Clicker: Interactivity and Labels", description: "a", lessonUnit:[.sample, .sample, .sample], quiz:[.sample, .sample, .sample]),
-                CourseLesson(title: "Intro to Swift 2", description: "a", lessonUnit:[.sample, .sample, .sample], quiz:[.sample, .sample, .sample]),
-                CourseLesson(title: "Arrays & Jokes App", description: "a", lessonUnit:[.sample, .sample, .sample], quiz:[.sample, .sample, .sample]),
-                CourseLesson(title: "Intro to Swift 3: Classes and Structs", description: "a", lessonUnit:[.sample, .sample, .sample], quiz:[.sample, .sample, .sample]),
-                CourseLesson(title: "ListView and Your Friends", description: "a", lessonUnit:[.sample, .sample, .sample], quiz:[.sample, .sample, .sample]),
-                CourseLesson(title: "Capstone Quiz", description: "a", lessonUnit:[.sample, .sample, .sample], quiz:[.sample, .sample, .sample])
+                CourseLesson(title: "Producing a Namecard Application", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
+                CourseLesson(title: "Intro to Swift 1", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
+                CourseLesson(title: "Clicker: Interactivity and Labels", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
+                CourseLesson(title: "Intro to Swift 2", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
+                CourseLesson(title: "Arrays & Jokes App", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
+                CourseLesson(title: "Intro to Swift 3: Classes and Structs", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
+                CourseLesson(title: "ListView and Your Friends", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
+                CourseLesson(title: "Capstone Quiz", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample])
                ],
                badgeQuiz: [
                 QuizQuestion(title: "Test Question", correctOptionIndex: 1, options: [
@@ -37,17 +37,17 @@ extension Course {
                categories: [.skill, .nationalService],
                courseBannerURL: .sampleImage,
                lesson: [
-                CourseLesson(title: "A History of Singapore's Arsenal ", description: "a", lessonUnit:[.sample, .sample, .sample], quiz:[.sample, .sample, .sample]),
-                CourseLesson(title: "The SAR-21: Your Best Friend", description: "a", lessonUnit:[.sample, .sample, .sample], quiz:[.sample, .sample, .sample]),
-                CourseLesson(title: "Disassembly of a SAR-21", description: "a", lessonUnit:[.sample, .sample, .sample], quiz:[.sample, .sample, .sample]),
-                CourseLesson(title: "Re-assembly of a SAR-21", description: "a", lessonUnit:[.sample, .sample, .sample], quiz:[.sample, .sample, .sample]),
-                CourseLesson(title: "How to Handle Ammunition", description: "a", lessonUnit:[.sample, .sample, .sample], quiz:[.sample, .sample, .sample]),
-                CourseLesson(title: "Handling the SAR-21", description: "a", lessonUnit:[.sample, .sample, .sample], quiz:[.sample, .sample, .sample]),
-                CourseLesson(title: "Steadying Your Aim", description: "a", lessonUnit:[.sample, .sample, .sample], quiz:[.sample, .sample, .sample]),
-                CourseLesson(title: "Your First Gunshot", description: "a", lessonUnit:[.sample, .sample, .sample], quiz:[.sample, .sample, .sample]),
-                CourseLesson(title: "Target Practice", description: "a", lessonUnit:[.sample, .sample, .sample], quiz:[.sample, .sample, .sample]),
-                CourseLesson(title: "Maneuvering With The SAR-21", description: "a", lessonUnit:[.sample, .sample, .sample], quiz:[.sample, .sample, .sample]),
-                CourseLesson(title: "Capstone Quiz", description: "a", lessonUnit:[.sample, .sample, .sample], quiz:[.sample, .sample, .sample])
+                CourseLesson(title: "A History of Singapore's Arsenal ", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
+                CourseLesson(title: "The SAR-21: Your Best Friend", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
+                CourseLesson(title: "Disassembly of a SAR-21", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
+                CourseLesson(title: "Re-assembly of a SAR-21", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
+                CourseLesson(title: "How to Handle Ammunition", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
+                CourseLesson(title: "Handling the SAR-21", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
+                CourseLesson(title: "Steadying Your Aim", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample])
+                CourseLesson(title: "Your First Gunshot", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
+                CourseLesson(title: "Target Practice", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
+                CourseLesson(title: "Maneuvering With The SAR-21", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample]),
+                CourseLesson(title: "Capstone Quiz", description: "a", lessonUnit: [.sample, .sample, .sample], quiz: [.sample, .sample, .sample])
                ],
                badgeQuiz: [
                 QuizQuestion(title: "Test Question", correctOptionIndex: 1, options: [
